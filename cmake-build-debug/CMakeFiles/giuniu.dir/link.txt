@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/giuniu.dir/main.cpp.o CMakeFiles/giuniu.dir/AST.cpp.o CMakeFiles/giuniu.dir/Lex.cpp.o CMakeFiles/giuniu.dir/Parse.cpp.o  -o giuniu 

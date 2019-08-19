@@ -1,0 +1,3 @@
+/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/giuniu.dir
+/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/edit_cache.dir
