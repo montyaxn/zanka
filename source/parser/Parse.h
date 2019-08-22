@@ -36,7 +36,6 @@ private:
     std::unique_ptr<EXPR_T_AST> read_Expr_T();
     std::unique_ptr<EXPR_T_DASH_AST> read_Expr_T_DASH();
     std::unique_ptr<EXPR_F_AST> read_Expr_F();
-    //TODO 実装しなきゃs
 
 
 
@@ -47,7 +46,7 @@ public:
 
     void test_lex();
 
-    std::unique_ptr<PROGRAM_AST> program;
+    std::unique_ptr<PROGRAM_AST> program = nullptr;
 };
 
 

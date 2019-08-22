@@ -6,21 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/montyaxn/work/zanka/Lex.h
-iostream
--
+/home/montyaxn/work/zanka/source/Token_def.h
+Type_def.h
+/home/montyaxn/work/zanka/source/Type_def.h
+
+/home/montyaxn/work/zanka/source/Type_def.h
+
+/home/montyaxn/work/zanka/source/ast/AST.h
 string
 -
 vector
 -
-Token_def.h
-/home/montyaxn/work/zanka/Token_def.h
+memory
+-
 
-/home/montyaxn/work/zanka/Parse.cpp
+/home/montyaxn/work/zanka/source/parser/Parse.cpp
 Parse.h
-/home/montyaxn/work/zanka/Parse.h
+/home/montyaxn/work/zanka/source/parser/Parse.h
 
-/home/montyaxn/work/zanka/Parse.h
+/home/montyaxn/work/zanka/source/parser/Parse.h
 iostream
 -
 string
@@ -29,32 +33,8 @@ vector
 -
 memory
 -
-Token_def.h
-/home/montyaxn/work/zanka/Token_def.h
-ast/AST.h
-/home/montyaxn/work/zanka/ast/AST.h
-
-/home/montyaxn/work/zanka/Token_def.h
-
-/home/montyaxn/work/zanka/ast/AST.cpp
-AST.h
-/home/montyaxn/work/zanka/ast/AST.h
-iostream
--
-
-/home/montyaxn/work/zanka/ast/AST.h
-string
--
-vector
--
-
-/home/montyaxn/work/zanka/main.cpp
-iostream
--
-fstream
--
-Lex.h
-/home/montyaxn/work/zanka/Lex.h
-Parse.h
-/home/montyaxn/work/zanka/Parse.h
+../Token_def.h
+/home/montyaxn/work/zanka/source/Token_def.h
+../ast/AST.h
+/home/montyaxn/work/zanka/source/ast/AST.h
 

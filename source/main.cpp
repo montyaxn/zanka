@@ -15,7 +15,5 @@ int main(int argc,char** argv) {
                     std::istreambuf_iterator<char>());
     Lex lex(target);
     Parser parser(lex.tokenize());
-    parser.test_lex();
     parser.parse();
-    parser.test_parse();
 }

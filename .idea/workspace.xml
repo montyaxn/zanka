@@ -12,43 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd2c34e3-05e9-4fb1-9db5-fd393b828f5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Type_def.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/ast/AST.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/code_gen/code_gen.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/code_gen/code_gen.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/montyaxn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/montyaxn.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/ast/AST.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/lexer/Lex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lex.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/lexer/Lex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/Parse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/Parse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Token_def.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/Token_def.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/AST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/Parse.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/Lex.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/zanka.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/zanka.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/giuniu" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/giuniu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/ast/AST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/ast/AST.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/ast/AST.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/ast/AST.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/code_gen/code_gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/code_gen/code_gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/code_gen/code_gen.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/code_gen/code_gen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/parser/Parse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/Parse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/parser/Parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/Parse.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,12 +57,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
     <favorites_list name="zanka" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>End</find>
-      <find>default</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -162,7 +137,7 @@
       <workItem from="1564796022497" duration="5799000" />
       <workItem from="1565973955434" duration="9718000" />
       <workItem from="1566221272997" duration="21015000" />
-      <workItem from="1566441707562" duration="6511000" />
+      <workItem from="1566441707562" duration="15081000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include <bits/unique_ptr.h>
+#include <memory>
 
 
 class BASE_AST {
@@ -83,9 +83,9 @@ private:
     std::unique_ptr<EXPR_AST> expr;
     std::unique_ptr<VALUE_AST> val;
 public:
-    explicit EXPR_F_AST(const std::unique_ptr<EXPR_AST> &expr) : val(nullptr) {}
+    explicit EXPR_F_AST(std::unique_ptr<EXPR_AST> expr) : val(nullptr), expr(std::move(expr)) {}
 
-    explicit EXPR_F_AST(const std::unique_ptr<VALUE_AST> &val) : expr(nullptr) {}
+    explicit EXPR_F_AST(std::unique_ptr<VALUE_AST> val) : expr(nullptr),val(std::move(val)) {}
 
 };
 
@@ -151,7 +151,6 @@ private:
     std::unique_ptr<EXPR_AST> expr;
 public:
     void make_expr(std::unique_ptr<EXPR_AST> e);
-
 };
 
 #endif //ZANKA_AST_H
