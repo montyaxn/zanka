@@ -8,25 +8,23 @@ Parser::Parser(std::vector<Token> t) : token_list(std::move(t)) {
     next_token();
 }
 
-Parser::~Parser() {
-    delete (program);
-}
 
 void Parser::parse() {
-    std::cout << "Parse start!" << std::endl;
     read_Program();
-    std::cout << "Parse end" << std::endl;
-
 }
+
+//
+// LL(1) Syntax analysis
+//
 
 void Parser::read_Program() {
     std::cout << "here1" << std::endl;
-    program->decl_block = read_Decl_block();
+    program = std::make_unique<PROGRAM_AST>(read_Decl_block());
 }
 
-FUNC_DECL_AST *Parser::read_Func_decl() {
+std::unique_ptr<FUNC_DECL_AST> Parser::read_Func_decl() {
     std::cout << "here2" << std::endl;
-    auto tmp = new FUNC_DECL_AST();
+    std::unique_ptr<FUNC_DECL_AST> tmp = std::make_unique<FUNC_DECL_AST>();
     tmp->name = token_now.str;
     token_check_next(Token_kind::Colon);
     token_check_next(Token_kind::L_paren);
@@ -55,7 +53,7 @@ FUNC_DECL_AST *Parser::read_Func_decl() {
     return tmp;
 }
 
-void Parser::read_Args(FUNC_DECL_AST *f) {
+void Parser::read_Args(std::unique_ptr<FUNC_DECL_AST> &f) {
     switch (token_now.kind) {
         default:
             next_token();
@@ -93,10 +91,10 @@ void Parser::read_Args(FUNC_DECL_AST *f) {
     }
 }
 
-DECL_BLOCK_AST *Parser::read_Decl_block() {
+std::unique_ptr<DECL_BLOCK_AST> Parser::read_Decl_block() {
     std::cout << "here3" << std::endl;
 
-    auto tmp = new DECL_BLOCK_AST();
+    auto tmp = std::make_unique<DECL_BLOCK_AST>();
     while (true) {
         switch (token_now.kind) {
             case Token_kind::Map:
@@ -111,25 +109,44 @@ DECL_BLOCK_AST *Parser::read_Decl_block() {
     return tmp;
 }
 
-RET_STMT_AST *Parser::read_Ret_stmt() {
+std::unique_ptr<RET_STMT_AST> Parser::read_Ret_stmt() {
     std::cout << "here 4" << std::endl;
 
-    auto tmp = new RET_STMT_AST();
-    tmp->expr = read_Expr();
+    auto tmp = std::make_unique<RET_STMT_AST>();
+    tmp->make_expr(read_Expr());
     token_check_now(Token_kind::Semi_colon);
     next_token();
     return tmp;
 }
 
-EXPR_AST *Parser::read_Expr() {
+std::unique_ptr<EXPR_AST> Parser::read_Expr() {
     std::cout << "here5" << std::endl;
+    auto tmp_T = read_Expr_T();
+    if (token_now.kind == Token_kind::Plus or token_now.kind==Token_kind::Minus) {
 
-    auto tmp = new EXPR_AST();
-    token_check_now(Token_kind::Integer_val);
-    tmp->val = token_now.val;
-    next_token();
-    return tmp;
+        auto tmp_Dash = read_Expr_Dash();
+        return std::make_unique<EXPR_AST>(tmp_T, tmp_Dash); //More + or -
+    }
+    return std::make_unique<EXPR_AST>(tmp_T); //No more + or -
 }
+
+std::unique_ptr<EXPR_T_AST> Parser::read_Expr_T(){
+    auto tmp_F = read_Expr_F();
+    if (token_now.kind == Token_kind::Mult or token_now.kind==Token_kind::Div) {
+
+        auto tmp_Dash = read_Expr_T_DASH();
+        return std::make_unique<EXPR_T_AST>(tmp_F, tmp_Dash);
+    }
+    return std::make_unique<EXPR_T_AST>(tmp_F);
+}
+
+std::unique_ptr<EXPR_DASH_AST> Parser::read_Expr_Dash(){
+
+}
+
+//
+// Token analysis
+//
 
 void Parser::next_token() {
     if (token_now.kind == Token_kind::End)
@@ -154,8 +171,4 @@ void Parser::test_lex() {
     for (const Token &t : token_list) {
         std::cout << int(t.kind) << std::endl;
     }
-}
-
-void Parser::test_parse() {
-    program->show();
 }

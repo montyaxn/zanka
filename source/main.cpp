@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include "Lex.h"
-#include "Parse.h"
+#include "parser/lexer/Lex.h"
+#include "parser/Parse.h"
 
 
 

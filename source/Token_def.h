@@ -5,12 +5,16 @@
 #ifndef ZANKA_TOKEN_DEF_H
 #define ZANKA_TOKEN_DEF_H
 
+#include "Type_def.h"
+
 enum class Token_kind{
     Ident,
+    val_bear,
     Integer_val,
 //    Decimal_val,
 //    Char_val,
 //    String_val,
+    token_bear,
     Map,
 //    Expr,
 //    MutMap,
@@ -19,6 +23,7 @@ enum class Token_kind{
     Comma,
     Period,
     Semi_colon,
+    ope_bear,
     Plus,
     Minus,
     Mult,
@@ -33,6 +38,7 @@ enum class Token_kind{
     R_brace,
     L_brace,
     Arrow,
+    end_bear,
     End,
     Other,
 };

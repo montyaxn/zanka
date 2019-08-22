@@ -84,28 +84,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/montyaxn/work/zanka/AST.cpp">
+		<Unit filename="/home/montyaxn/work/zanka/source/Token_def.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/AST.h">
+		<Unit filename="/home/montyaxn/work/zanka/source/Type_def.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/Lex.cpp">
+		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/Lex.h">
+		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/Parse.cpp">
+		<Unit filename="/home/montyaxn/work/zanka/source/code_gen/code_gen.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/Parse.h">
+		<Unit filename="/home/montyaxn/work/zanka/source/code_gen/code_gen.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/Token_def.h">
+		<Unit filename="/home/montyaxn/work/zanka/source/main.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/main.cpp">
+		<Unit filename="/home/montyaxn/work/zanka/source/parser/Parse.cpp">
+			<Option target="giuniu"/>
+		</Unit>
+		<Unit filename="/home/montyaxn/work/zanka/source/parser/Parse.h">
+			<Option target="giuniu"/>
+		</Unit>
+		<Unit filename="/home/montyaxn/work/zanka/source/parser/lexer/Lex.cpp">
+			<Option target="giuniu"/>
+		</Unit>
+		<Unit filename="/home/montyaxn/work/zanka/source/parser/lexer/Lex.h">
 			<Option target="giuniu"/>
 		</Unit>
 		<Unit filename="/home/montyaxn/work/zanka/CMakeLists.txt">

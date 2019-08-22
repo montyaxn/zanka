@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/montyaxn/work/zanka/AST.h
-string
--
-vector
--
-
-/home/montyaxn/work/zanka/Lex.cpp
-Lex.h
-/home/montyaxn/work/zanka/Lex.h
-
 /home/montyaxn/work/zanka/Lex.h
 iostream
 -
@@ -41,10 +31,22 @@ memory
 -
 Token_def.h
 /home/montyaxn/work/zanka/Token_def.h
-AST.h
-/home/montyaxn/work/zanka/AST.h
+ast/AST.h
+/home/montyaxn/work/zanka/ast/AST.h
 
 /home/montyaxn/work/zanka/Token_def.h
+
+/home/montyaxn/work/zanka/ast/AST.cpp
+AST.h
+/home/montyaxn/work/zanka/ast/AST.h
+iostream
+-
+
+/home/montyaxn/work/zanka/ast/AST.h
+string
+-
+vector
+-
 
 /home/montyaxn/work/zanka/main.cpp
 iostream

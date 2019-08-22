@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/giuniu.dir/main.cpp.o"
-  "CMakeFiles/giuniu.dir/AST.cpp.o"
-  "CMakeFiles/giuniu.dir/Lex.cpp.o"
-  "CMakeFiles/giuniu.dir/Parse.cpp.o"
+  "CMakeFiles/giuniu.dir/source/main.cpp.o"
+  "CMakeFiles/giuniu.dir/source/ast/AST.cpp.o"
+  "CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o"
+  "CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o"
+  "CMakeFiles/giuniu.dir/source/code_gen/code_gen.cpp.o"
   "giuniu.pdb"
   "giuniu"
 )
