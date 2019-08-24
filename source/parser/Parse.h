@@ -17,6 +17,9 @@ class Parser {
 private:
     const std::vector<Token> token_list;
 
+    static void initialize_BiOpPrecedence();
+    int get_BiOpPrecedence();
+
     //トークン読み込み関係
     Token token_now;
     int now_counter = 0;
@@ -31,11 +34,13 @@ private:
     std::unique_ptr<FUNC_DECL_AST> read_Func_decl();
     void read_Args(std::unique_ptr<FUNC_DECL_AST>& f);
     std::unique_ptr<RET_STMT_AST> read_Ret_stmt();
-    std::unique_ptr<EXPR_AST> read_Expr();
-    std::unique_ptr<EXPR_DASH_AST> read_Expr_Dash();
-    std::unique_ptr<EXPR_T_AST> read_Expr_T();
-    std::unique_ptr<EXPR_T_DASH_AST> read_Expr_T_DASH();
-    std::unique_ptr<EXPR_F_AST> read_Expr_F();
+    std::unique_ptr<EXPR_BASE_AST> read_Expr();
+    std::unique_ptr<EXPR_BASE_AST> read_PrimaryExpr();
+    std::unique_ptr<EXPR_BASE_AST> read_and_marge_RHS(int OpPre,std::unique_ptr<EXPR_BASE_AST> LHS);
+//    std::unique_ptr<EXPR_DASH_AST> read_Expr_Dash();
+//    std::unique_ptr<EXPR_T_AST> read_Expr_T();
+//    std::unique_ptr<EXPR_T_DASH_AST> read_Expr_T_DASH();
+//    std::unique_ptr<EXPR_F_AST> read_Expr_F();
 
 
 
@@ -47,6 +52,7 @@ public:
     void test_lex();
 
     std::unique_ptr<PROGRAM_AST> program = nullptr;
+
 };
 
 

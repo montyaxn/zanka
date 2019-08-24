@@ -12,24 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd2c34e3-05e9-4fb1-9db5-fd393b828f5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source/ast/AST_code_gen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/Lex.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/giuniu.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/giuniu" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/giuniu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/zanka.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/zanka.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Token_def.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/Token_def.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/ast/AST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/ast/AST.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/ast/AST.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/ast/AST.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/code_gen/code_gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/code_gen/code_gen.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/code_gen/code_gen.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/code_gen/code_gen.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/parser/Parse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/Parse.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/parser/Parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/Parse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/parser/lexer/Lex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/parser/lexer/Lex.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +65,7 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="QcwVOMrN" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1Pe4XjM2xgFNhyy9ZkmXL8wjGdY" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -137,8 +139,18 @@
       <workItem from="1564796022497" duration="5799000" />
       <workItem from="1565973955434" duration="9718000" />
       <workItem from="1566221272997" duration="21015000" />
-      <workItem from="1566441707562" duration="15081000" />
+      <workItem from="1566441707562" duration="15266000" />
+      <workItem from="1566485590370" duration="14000" />
+      <workItem from="1566531231313" duration="19072000" />
     </task>
+    <task id="LOCAL-00001" summary="パーサ完成とASTも完成">
+      <created>1566485510190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566485510191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +168,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="パーサ完成とASTも完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="パーサ完成とASTも完成" />
   </component>
   <component name="masterDetails">
     <states>

@@ -23,6 +23,6 @@ void FUNC_DECL_AST::make_ret_type(std::string type) {
 }
 
 
-void RET_STMT_AST::make_expr(std::unique_ptr<EXPR_AST> e) {
+void RET_STMT_AST::make_expr(std::unique_ptr<EXPR_BASE_AST> e) {
     expr = std::move(e);
 }

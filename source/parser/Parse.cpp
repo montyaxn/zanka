@@ -3,9 +3,30 @@
 //
 
 #include "Parse.h"
+#include <map>
+
+static std::map<std::string,int> BiOpPrecedence;
 
 Parser::Parser(std::vector<Token> t) : token_list(std::move(t)) {
     next_token();
+    initialize_BiOpPrecedence();
+}
+
+void Parser::initialize_BiOpPrecedence() {
+    BiOpPrecedence["<"] = 10;
+    BiOpPrecedence[">"] = 10;
+    BiOpPrecedence["=="] = 10;
+    BiOpPrecedence["<="] = 10;
+    BiOpPrecedence[">="] = 10;
+    BiOpPrecedence["+"] = 20;
+    BiOpPrecedence["-"] = 20;
+    BiOpPrecedence["*"] = 30;
+    BiOpPrecedence["/"] = 30;
+}
+
+
+int Parser::get_BiOpPrecedence(){
+    return BiOpPrecedence[token_now.str];
 }
 
 
@@ -114,77 +135,105 @@ std::unique_ptr<RET_STMT_AST> Parser::read_Ret_stmt() {
     return tmp;
 }
 
-std::unique_ptr<EXPR_AST> Parser::read_Expr() {
-    auto tmp_T = read_Expr_T();
-    if (token_now.kind == Token_kind::Plus or token_now.kind == Token_kind::Minus) {
-        auto tmp_Dash = read_Expr_Dash();
-        return std::make_unique<EXPR_AST>(std::move(tmp_T), std::move(tmp_Dash)); //More + or -
-    }
-    return std::make_unique<EXPR_AST>(std::move(tmp_T)); //No more + or -
-}
-
-std::unique_ptr<EXPR_T_AST> Parser::read_Expr_T() {
-    auto tmp_F = read_Expr_F();
-    if (token_now.kind == Token_kind::Mult or token_now.kind == Token_kind::Div) {
-        auto tmp_Dash = read_Expr_T_DASH();
-        return std::make_unique<EXPR_T_AST>(std::move(tmp_F), std::move(tmp_Dash)); //More * or /
-    }
-    return std::make_unique<EXPR_T_AST>(std::move(tmp_F)); //No more * or /
-}
-
-std::unique_ptr<EXPR_DASH_AST> Parser::read_Expr_Dash() {
-    Ope ope;
-    if (token_now.kind == Token_kind::Plus) {
-        ope = Plus;
-    } else {
-        ope = Minus;
-    }
+std::unique_ptr<EXPR_BASE_AST> Parser::read_Expr() {
+    std::unique_ptr<EXPR_BASE_AST> LHS;
+    std::unique_ptr<EXPR_BASE_AST> RHS;
+    LHS = read_PrimaryExpr();
     next_token();
-    auto tmp_T = read_Expr_T();
-    if (token_now.kind == Token_kind::Plus or token_now.kind == Token_kind::Minus) {
-        auto tmp_Dash = read_Expr_Dash(); //More * or /
-        return std::make_unique<EXPR_DASH_AST>(ope, std::move(tmp_T), std::move(tmp_Dash));
+    if(token_now.kind!=Token_kind::Ope){
+        return LHS;
+    }else{
+        Token cope = token_now;
+        next_token();
+        auto tmp_primary = read_PrimaryExpr();
+        next_token();
+        while(true) {
+            if (token_now.kind != Token_kind::Ope) {
+                return std::make_unique<EXPR_AST>(cope.str, LHS, tmp_primary);
+            } else {
+                if (BiOpPrecedence[cope.str] > BiOpPrecedence[token_now.str]) {
+
+                }
+            }
+        }
     }
-    return std::make_unique<EXPR_DASH_AST>(ope, std::move(tmp_T));
 }
 
-std::unique_ptr<EXPR_T_DASH_AST> Parser::read_Expr_T_DASH() {
-    Ope ope;
-    if (token_now.kind == Token_kind::Mult) {
-        ope = Mult;
-    } else {
-        ope = Div;
-    }
-    next_token();
-    auto tmp_F = read_Expr_F();
-    if (token_now.kind == Token_kind::Mult or token_now.kind == Token_kind::Div) {
-        auto tmp_Dash = read_Expr_T_DASH(); //More * or /
-        return std::make_unique<EXPR_T_DASH_AST>(ope, std::move(tmp_Dash), std::move(tmp_F));
-    }
-    return std::make_unique<EXPR_T_DASH_AST>(ope, std::move(tmp_F));
+std::unique_ptr<EXPR_BASE_AST> Parser::read_and_marge_RHS(int OpPre,std::unique_ptr<EXPR_BASE_AST> LHS){
+    
 }
 
-std::unique_ptr<EXPR_F_AST> Parser::read_Expr_F() {
-    if (token_now.kind == Token_kind::L_paren) {
-        next_token();
-        auto expr = read_Expr();
-        token_check_now(Token_kind::R_paren);
-        next_token();
-        return std::make_unique<EXPR_F_AST>(std::move(expr));
-    } else if (token_now.kind == Token_kind::Integer_val) {
-        auto val = std::make_unique<I32_EXPR_AST>(token_now.val);
-        next_token();
-        return std::make_unique<EXPR_F_AST>(std::move(val));
-    }
-//      else if (token_now.kind==Token_kind::Ident) {
-//        return std::make_unique<EXPR_F_AST>();
+//std::unique_ptr<EXPR_AST> Parser::read_Expr() {
+//    auto tmp_T = read_Expr_T();
+//    if (token_now.kind == Token_kind::Plus or token_now.kind == Token_kind::Minus) {
+//        auto tmp_Dash = read_Expr_Dash();
+//        return std::make_unique<EXPR_AST>(std::move(tmp_T), std::move(tmp_Dash)); //More + or -
 //    }
-    else {
-        std::cout << "error" << std::endl;
-        std::cout << now_counter << std::endl;
-        return std::make_unique<EXPR_F_AST>(std::make_unique<I32_EXPR_AST>(0));
-    }
-}
+//    return std::make_unique<EXPR_AST>(std::move(tmp_T)); //No more + or -
+//}
+// parser書き直し、うまく行ったらこのコメントは消す
+//std::unique_ptr<EXPR_T_AST> Parser::read_Expr_T() {
+//    auto tmp_F = read_Expr_F();
+//    if (token_now.kind == Token_kind::Mult or token_now.kind == Token_kind::Div) {
+//        auto tmp_Dash = read_Expr_T_DASH();
+//        return std::make_unique<EXPR_T_AST>(std::move(tmp_F), std::move(tmp_Dash)); //More * or /
+//    }
+//    return std::make_unique<EXPR_T_AST>(std::move(tmp_F)); //No more * or /
+//}
+//
+//std::unique_ptr<EXPR_DASH_AST> Parser::read_Expr_Dash() {
+//    Ope ope;
+//    if (token_now.kind == Token_kind::Plus) {
+//        ope = Plus;
+//    } else {
+//        ope = Minus;
+//    }
+//    next_token();
+//    auto tmp_T = read_Expr_T();
+//    if (token_now.kind == Token_kind::Plus or token_now.kind == Token_kind::Minus) {
+//        auto tmp_Dash = read_Expr_Dash(); //More * or /
+//        return std::make_unique<EXPR_DASH_AST>(ope, std::move(tmp_T), std::move(tmp_Dash));
+//    }
+//    return std::make_unique<EXPR_DASH_AST>(ope, std::move(tmp_T));
+//}
+//
+//std::unique_ptr<EXPR_T_DASH_AST> Parser::read_Expr_T_DASH() {
+//    Ope ope;
+//    if (token_now.kind == Token_kind::Mult) {
+//        ope = Mult;
+//    } else {
+//        ope = Div;
+//    }
+//    next_token();
+//    auto tmp_F = read_Expr_F();
+//    if (token_now.kind == Token_kind::Mult or token_now.kind == Token_kind::Div) {
+//        auto tmp_Dash = read_Expr_T_DASH(); //More * or /
+//        return std::make_unique<EXPR_T_DASH_AST>(ope, std::move(tmp_Dash), std::move(tmp_F));
+//    }
+//    return std::make_unique<EXPR_T_DASH_AST>(ope, std::move(tmp_F));
+//}
+//
+//std::unique_ptr<EXPR_F_AST> Parser::read_Expr_F() {
+//    if (token_now.kind == Token_kind::L_paren) {
+//        next_token();
+//        auto expr = read_Expr();
+//        token_check_now(Token_kind::R_paren);
+//        next_token();
+//        return std::make_unique<EXPR_F_AST>(std::move(expr));
+//    } else if (token_now.kind == Token_kind::Integer_val) {
+//        auto val = std::make_unique<I32_EXPR_AST>(token_now.val);
+//        next_token();
+//        return std::make_unique<EXPR_F_AST>(std::move(val));
+//    }
+////      else if (token_now.kind==Token_kind::Ident) {
+////        return std::make_unique<EXPR_F_AST>();
+////    }
+//    else {
+//        std::cout << "error" << std::endl;
+//        std::cout << now_counter << std::endl;
+//        return std::make_unique<EXPR_F_AST>(std::make_unique<I32_EXPR_AST>(0));
+//    }
+//}
 
 //
 // Token analysis

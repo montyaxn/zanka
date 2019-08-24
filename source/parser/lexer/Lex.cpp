@@ -11,8 +11,8 @@ Lex::Lex(std::string file) : file_length(file.length()) {
 }
 
 void Lex::make_charKind_T() {
-    for (int i = 0; i < 256; i++) {
-        charKind_T[i] = Char_kind::Other;
+    for (auto & i : charKind_T) {
+        i = Char_kind::Other;
     }
 
     //Whites
@@ -136,7 +136,8 @@ std::vector<Token> Lex::tokenize() {
                 next_char();
                 break;
             case Char_kind ::Plus:
-                tmp.kind = Token_kind ::Plus;
+                tmp.kind = Token_kind ::Ope;
+                tmp.str = "+";
                 next_char();
                 break;
             case Char_kind ::Minus:
@@ -145,21 +146,25 @@ std::vector<Token> Lex::tokenize() {
                     tmp.kind=Token_kind ::Arrow;
                     next_char();
                 } else{
-                    tmp.kind=Token_kind ::Minus;
+                    tmp.kind=Token_kind ::Ope;
+                    tmp.str = "-";
                 }
                 break;
             case Char_kind ::Mult:
-                tmp.kind=Token_kind ::Mult; //*
+                tmp.kind=Token_kind ::Ope; //*
+                tmp.str = "*";
                 next_char();
                 break;
             case Char_kind ::Div:
-                tmp.kind=Token_kind ::Div; // /
+                tmp.kind=Token_kind ::Ope; // /
+                tmp.str = "/";
                 next_char();
                 break;
             case Char_kind::Eq:
                 next_char();
                 if(ck==Char_kind::Eq) {
-                    tmp.kind = Token_kind::Eq; //==
+                    tmp.kind = Token_kind::Ope; //==
+                    tmp.str = "==";
                     next_char();
                 } else{
                     tmp.kind=Token_kind::Other;
@@ -168,19 +173,23 @@ std::vector<Token> Lex::tokenize() {
             case Char_kind ::Less:
                 next_char();
                 if(ck==Char_kind::Eq){
-                    tmp.kind = Token_kind ::Leq;
+                    tmp.kind = Token_kind ::Ope;
+                    tmp.str = "<=";
                     next_char();
                 } else{
-                    tmp.kind = Token_kind ::Less;
+                    tmp.kind = Token_kind ::Ope;
+                    tmp.str = "<";
                 }
                 break;
             case Char_kind ::Gtr:
                 next_char();
                 if(ck == Char_kind::Eq){
-                    tmp.kind = Token_kind ::GtrEq;
+                    tmp.kind = Token_kind ::Ope;
+                    tmp.str = ">=";
                     next_char();
                 } else{
-                    tmp.kind = Token_kind ::Gtr;
+                    tmp.kind = Token_kind ::Ope;
+                    tmp.str = ">";
                 }
                 break;
 

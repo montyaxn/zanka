@@ -8,12 +8,14 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <llvm/IR/Value.h>
 
 
 class BASE_AST {
 private:
 public:
     virtual ~BASE_AST() = default;
+    virtual llvm::Value * generate() = 0;
 
 };
 
@@ -25,6 +27,8 @@ public:
 
 
     void add_decl(std::unique_ptr<BASE_AST> decl);
+
+    llvm::Value * generate() override;
 };
 
 class PROGRAM_AST : public BASE_AST {
@@ -32,7 +36,9 @@ class PROGRAM_AST : public BASE_AST {
 public:
     explicit PROGRAM_AST(std::unique_ptr<DECL_BLOCK_AST> decl_block) : decl_block(std::move(decl_block)) {}
 
+    llvm::Value * generate() override;
 };
+
 
 struct ARG {
     std::string name = "";
@@ -53,104 +59,132 @@ public:
     void make_ret_type(std::string type);
 
     std::string name = "";
+
+    llvm::Value * generate() override;
 };
 
-class VALUE_AST : BASE_AST {
-
+class EXPR_BASE_AST : public BASE_AST{
 };
 
+class EXPR_VALUE_BASE_AST : public EXPR_BASE_AST{
 
-class VAR_EXPR_AST : public VALUE_AST {
-    std::string name;
-};
-
-class FUNC_EXPR_AST : public VALUE_AST {
-    std::string name;
-    std::vector<ARG> args;
-};
-
-class I32_EXPR_AST : public VALUE_AST {
-private:
-    int val;
-public:
-    explicit I32_EXPR_AST(int val) : val(val) {}
 };
 
 class EXPR_AST; // expr_f_ast にて必要
 
-class EXPR_F_AST : public BASE_AST {
+class VAR_EXPR_AST : public EXPR_VALUE_BASE_AST {
+    std::string name;
+};
+
+class FUNC_EXPR_AST : public EXPR_VALUE_BASE_AST {
+    std::string name;
+    std::vector<std::unique_ptr<EXPR_AST>> args;
+};
+
+class I32_EXPR_AST : public EXPR_VALUE_BASE_AST {
 private:
-    std::unique_ptr<EXPR_AST> expr;
-    std::unique_ptr<VALUE_AST> val;
+    int val;
 public:
-    explicit EXPR_F_AST(std::unique_ptr<EXPR_AST> expr) : val(nullptr), expr(std::move(expr)) {}
+    explicit I32_EXPR_AST(int val) : val(val) {}
 
-    explicit EXPR_F_AST(std::unique_ptr<VALUE_AST> val) : expr(nullptr),val(std::move(val)) {}
-
-};
-
-enum Ope {
-    Plus,
-    Minus,
-    Mult,
-    Div
+    llvm::Value * generate() override;
 };
 
 
-class EXPR_T_DASH_AST : public BASE_AST {
-private:
-    std::unique_ptr<EXPR_T_DASH_AST> term = nullptr;
-    std::unique_ptr<EXPR_F_AST> fuct = nullptr;
-    Ope ope = Mult;
+
+//class EXPR_F_AST : public EXPR_BASE_AST {
+//private:
+//    std::unique_ptr<EXPR_AST> expr;
+//    std::unique_ptr<EXPR_BASE_AST> val;
+//public:
+//    explicit EXPR_F_AST(std::unique_ptr<EXPR_AST> expr) : val(nullptr), expr(std::move(expr)) {}
+//
+//    explicit EXPR_F_AST(std::unique_ptr<EXPR_BASE_AST> val) : expr(nullptr),val(std::move(val)) {}
+//
+//    llvm::Value *generate() override;
+//};
+
+//enum Ope {
+//    Plus,
+//    Minus,
+//    Mult,
+//    Div
+//};
+
+
+//class EXPR_T_DASH_AST : public EXPR_BASE_AST {
+//private:
+//    std::unique_ptr<EXPR_T_DASH_AST> term = nullptr;
+//    std::unique_ptr<EXPR_F_AST> fuct = nullptr;
+//    Ope ope = Mult;
+//public:
+//    EXPR_T_DASH_AST(Ope ope,std::unique_ptr<EXPR_F_AST> fuct) : fuct(std::move(fuct)), ope(ope) {}
+//
+//    EXPR_T_DASH_AST(Ope ope,std::unique_ptr<EXPR_T_DASH_AST> term, std::unique_ptr<EXPR_F_AST> fuct) : term(
+//            std::move(term)), fuct(std::move(fuct)), ope(ope) {}
+//    Ope get_ope();
+//    llvm::Value *generate() override;
+//};
+//
+//class EXPR_T_AST : public EXPR_BASE_AST {
+//private:
+//    std::unique_ptr<EXPR_F_AST> fuct;
+//    std::unique_ptr<EXPR_T_DASH_AST> term = nullptr;
+//public:
+//    explicit EXPR_T_AST(std::unique_ptr<EXPR_F_AST> fuct) : fuct(std::move(fuct)){}
+//
+//    EXPR_T_AST( std::unique_ptr<EXPR_F_AST> fuct,std::unique_ptr<EXPR_T_DASH_AST> term) : term(
+//            std::move(term)), fuct(std::move(fuct)) {}
+//
+//    llvm::Value *generate() override;
+//};
+//
+//class EXPR_DASH_AST : public EXPR_BASE_AST {
+//private:
+//    std::unique_ptr<EXPR_T_AST> term = nullptr;
+//    std::unique_ptr<EXPR_DASH_AST> expr = nullptr;
+//    Ope ope = Plus;
+//public:
+//    EXPR_DASH_AST(Ope ope,std::unique_ptr<EXPR_T_AST> term) : term(std::move(term)), ope(ope) {}
+//
+//    EXPR_DASH_AST(Ope ope,std::unique_ptr<EXPR_T_AST> term, std::unique_ptr<EXPR_DASH_AST> expr) : term(
+//            std::move(term)), expr(std::move(expr)), ope(ope) {}
+//    Ope get_ope();
+//    llvm::Value *generate() override;
+//};
+
+//class EXPR_AST : public EXPR_BASE_AST {
+//private:
+//    std::unique_ptr<EXPR_T_AST> term;
+//    std::unique_ptr<EXPR_DASH_AST> expr;
+//public:
+//    explicit EXPR_AST(std::unique_ptr<EXPR_T_AST> term) : term(std::move(term)) {}
+//
+//    EXPR_AST(std::unique_ptr<EXPR_T_AST> term, std::unique_ptr<EXPR_DASH_AST> expr) : term(std::move(term)),
+//                                                                                      expr(std::move(expr)) {}
+//
+//    llvm::Value *generate() override;
+//};
+
+class EXPR_AST : public EXPR_BASE_AST {
+    std::string ope;
+    std::unique_ptr<EXPR_BASE_AST> LHS, RHS;
+
 public:
-    EXPR_T_DASH_AST(Ope ope,std::unique_ptr<EXPR_F_AST> fuct) : fuct(std::move(fuct)), ope(ope) {}
 
-    EXPR_T_DASH_AST(Ope ope,std::unique_ptr<EXPR_T_DASH_AST> term, std::unique_ptr<EXPR_F_AST> fuct) : term(
-            std::move(term)), fuct(std::move(fuct)), ope(ope) {}
-
+    EXPR_AST(std::string ope, std::unique_ptr<EXPR_BASE_AST> LHS,
+                  std::unique_ptr<EXPR_BASE_AST> RHS)
+            : ope(std::move(ope)), LHS(std::move(LHS)), RHS(std::move(RHS)) {}
 };
 
-class EXPR_T_AST : public BASE_AST {
-private:
-    std::unique_ptr<EXPR_F_AST> fuct;
-    std::unique_ptr<EXPR_T_DASH_AST> term = nullptr;
-public:
-    explicit EXPR_T_AST(std::unique_ptr<EXPR_F_AST> fuct) : fuct(std::move(fuct)){}
-
-    EXPR_T_AST( std::unique_ptr<EXPR_F_AST> fuct,std::unique_ptr<EXPR_T_DASH_AST> term) : term(
-            std::move(term)), fuct(std::move(fuct)) {}
-
-};
-
-class EXPR_DASH_AST : public BASE_AST {
-private:
-    std::unique_ptr<EXPR_T_AST> term = nullptr;
-    std::unique_ptr<EXPR_DASH_AST> expr = nullptr;
-    Ope ope = Plus;
-public:
-    EXPR_DASH_AST(Ope ope,std::unique_ptr<EXPR_T_AST> term) : term(std::move(term)), ope(ope) {}
-
-    EXPR_DASH_AST(Ope ope,std::unique_ptr<EXPR_T_AST> term, std::unique_ptr<EXPR_DASH_AST> expr) : term(
-            std::move(term)), expr(std::move(expr)), ope(ope) {}
-};
-
-class EXPR_AST : public BASE_AST {
-private:
-    std::unique_ptr<EXPR_T_AST> term;
-    std::unique_ptr<EXPR_DASH_AST> expr;
-public:
-    explicit EXPR_AST(std::unique_ptr<EXPR_T_AST> term) : term(std::move(term)) {}
-
-    EXPR_AST(std::unique_ptr<EXPR_T_AST> term, std::unique_ptr<EXPR_DASH_AST> expr) : term(std::move(term)),
-                                                                                      expr(std::move(expr)) {}
-
-};
 
 class RET_STMT_AST : public BASE_AST {
 private:
-    std::unique_ptr<EXPR_AST> expr;
+    std::unique_ptr<EXPR_BASE_AST> expr;
 public:
-    void make_expr(std::unique_ptr<EXPR_AST> e);
+    void make_expr(std::unique_ptr<EXPR_BASE_AST> e);
+
+    llvm::Value *generate() override;
 };
 
 #endif //ZANKA_AST_H

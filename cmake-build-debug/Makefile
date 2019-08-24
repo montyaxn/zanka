@@ -150,6 +150,33 @@ source/ast/AST.cpp.s:
 	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST.cpp.s
 .PHONY : source/ast/AST.cpp.s
 
+source/ast/AST_code_gen.o: source/ast/AST_code_gen.cpp.o
+
+.PHONY : source/ast/AST_code_gen.o
+
+# target to build an object file
+source/ast/AST_code_gen.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o
+.PHONY : source/ast/AST_code_gen.cpp.o
+
+source/ast/AST_code_gen.i: source/ast/AST_code_gen.cpp.i
+
+.PHONY : source/ast/AST_code_gen.i
+
+# target to preprocess a source file
+source/ast/AST_code_gen.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.i
+.PHONY : source/ast/AST_code_gen.cpp.i
+
+source/ast/AST_code_gen.s: source/ast/AST_code_gen.cpp.s
+
+.PHONY : source/ast/AST_code_gen.s
+
+# target to generate assembly for a file
+source/ast/AST_code_gen.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.s
+.PHONY : source/ast/AST_code_gen.cpp.s
+
 source/code_gen/code_gen.o: source/code_gen/code_gen.cpp.o
 
 .PHONY : source/code_gen/code_gen.o
@@ -270,6 +297,9 @@ help:
 	@echo "... source/ast/AST.o"
 	@echo "... source/ast/AST.i"
 	@echo "... source/ast/AST.s"
+	@echo "... source/ast/AST_code_gen.o"
+	@echo "... source/ast/AST_code_gen.i"
+	@echo "... source/ast/AST_code_gen.s"
 	@echo "... source/code_gen/code_gen.o"
 	@echo "... source/code_gen/code_gen.i"
 	@echo "... source/code_gen/code_gen.s"

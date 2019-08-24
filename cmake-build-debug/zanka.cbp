@@ -96,6 +96,9 @@
 		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST.h">
 			<Option target="giuniu"/>
 		</Unit>
+		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST_code_gen.cpp">
+			<Option target="giuniu"/>
+		</Unit>
 		<Unit filename="/home/montyaxn/work/zanka/source/code_gen/code_gen.cpp">
 			<Option target="giuniu"/>
 		</Unit>

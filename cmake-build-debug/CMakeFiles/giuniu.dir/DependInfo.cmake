@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/montyaxn/work/zanka/source/ast/AST.cpp" "/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/ast/AST.cpp.o"
+  "/home/montyaxn/work/zanka/source/ast/AST_code_gen.cpp" "/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o"
   "/home/montyaxn/work/zanka/source/code_gen/code_gen.cpp" "/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/code_gen/code_gen.cpp.o"
   "/home/montyaxn/work/zanka/source/main.cpp" "/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/main.cpp.o"
   "/home/montyaxn/work/zanka/source/parser/Parse.cpp" "/home/montyaxn/work/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o"
