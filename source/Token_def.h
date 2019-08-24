@@ -42,7 +42,6 @@ enum class Token_kind {
 
 struct Token {
     Token_kind kind;
-    int val = 0;
     std::string str = "";
 };
 

@@ -4,6 +4,9 @@
 CMakeFiles/giuniu.dir/source/ast/AST.cpp.o
  /home/montyaxn/work/zanka/source/ast/AST.cpp
  /home/montyaxn/work/zanka/source/ast/AST.h
+CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o
+ /home/montyaxn/work/zanka/source/ast/AST.h
+ /home/montyaxn/work/zanka/source/ast/AST_code_gen.cpp
 CMakeFiles/giuniu.dir/source/code_gen/code_gen.cpp.o
  /home/montyaxn/work/zanka/source/code_gen/code_gen.cpp
 CMakeFiles/giuniu.dir/source/main.cpp.o

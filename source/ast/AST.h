@@ -81,11 +81,11 @@ class FUNC_EXPR_AST : public EXPR_VALUE_BASE_AST {
     std::vector<std::unique_ptr<EXPR_AST>> args;
 };
 
-class I32_EXPR_AST : public EXPR_VALUE_BASE_AST {
+class INT_EXPR_AST : public EXPR_VALUE_BASE_AST {
 private:
-    int val;
+    std::string val;
 public:
-    explicit I32_EXPR_AST(int val) : val(val) {}
+    explicit INT_EXPR_AST(std::string val) : val(val) {}
 
     llvm::Value * generate() override;
 };
@@ -166,13 +166,13 @@ public:
 //    llvm::Value *generate() override;
 //};
 
-class EXPR_AST : public EXPR_BASE_AST {
+class EXPR_BI_AST : public EXPR_BASE_AST {
     std::string ope;
     std::unique_ptr<EXPR_BASE_AST> LHS, RHS;
 
 public:
-
-    EXPR_AST(std::string ope, std::unique_ptr<EXPR_BASE_AST> LHS,
+    llvm::Value* generate() override;
+    EXPR_BI_AST(std::string ope, std::unique_ptr<EXPR_BASE_AST> LHS,
                   std::unique_ptr<EXPR_BASE_AST> RHS)
             : ope(std::move(ope)), LHS(std::move(LHS)), RHS(std::move(RHS)) {}
 };

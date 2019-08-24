@@ -4,6 +4,9 @@
 CMakeFiles/giuniu.dir/source/ast/AST.cpp.o: ../source/ast/AST.cpp
 CMakeFiles/giuniu.dir/source/ast/AST.cpp.o: ../source/ast/AST.h
 
+CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o: ../source/ast/AST.h
+CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o: ../source/ast/AST_code_gen.cpp
+
 CMakeFiles/giuniu.dir/source/code_gen/code_gen.cpp.o: ../source/code_gen/code_gen.cpp
 
 CMakeFiles/giuniu.dir/source/main.cpp.o: ../source/Token_def.h

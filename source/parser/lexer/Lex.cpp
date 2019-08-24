@@ -93,10 +93,10 @@ std::vector<Token> Lex::tokenize() {
                 break;
 
             case Char_kind::Digit:
-                tmp.val = ch - '0';
+                tmp.str.push_back(ch);
                 next_char();
                 while (ck == Char_kind::Digit) {
-                    tmp.val = (tmp.val * 10) + (ch - '0');
+                    tmp.str.push_back(ch);
                     next_char();
                 }
                 tmp.kind = Token_kind::Integer_val;

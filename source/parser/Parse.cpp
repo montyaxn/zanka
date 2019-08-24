@@ -25,13 +25,10 @@ void Parser::initialize_BiOpPrecedence() {
 }
 
 
-int Parser::get_BiOpPrecedence(){
-    return BiOpPrecedence[token_now.str];
-}
-
 
 void Parser::parse() {
     read_Program();
+    return;
 }
 
 //
@@ -139,28 +136,46 @@ std::unique_ptr<EXPR_BASE_AST> Parser::read_Expr() {
     std::unique_ptr<EXPR_BASE_AST> LHS;
     std::unique_ptr<EXPR_BASE_AST> RHS;
     LHS = read_PrimaryExpr();
-    next_token();
-    if(token_now.kind!=Token_kind::Ope){
-        return LHS;
-    }else{
-        Token cope = token_now;
-        next_token();
-        auto tmp_primary = read_PrimaryExpr();
-        next_token();
-        while(true) {
-            if (token_now.kind != Token_kind::Ope) {
-                return std::make_unique<EXPR_AST>(cope.str, LHS, tmp_primary);
-            } else {
-                if (BiOpPrecedence[cope.str] > BiOpPrecedence[token_now.str]) {
-
-                }
-            }
+    while(true) {
+        if (token_now.kind != Token_kind::Ope) {
+            return LHS;
+        } else {
+            Token cope = token_now;
+            next_token();
+            LHS = read_marge_RHS(cope.str,std::move(LHS));
         }
     }
 }
 
-std::unique_ptr<EXPR_BASE_AST> Parser::read_and_marge_RHS(int OpPre,std::unique_ptr<EXPR_BASE_AST> LHS){
-    
+std::unique_ptr<EXPR_BASE_AST> Parser::read_marge_RHS(std::string Op,std::unique_ptr<EXPR_BASE_AST> LHS){
+    auto tmp = read_PrimaryExpr();
+    auto next_op = token_now;
+    if(next_op.kind!=Token_kind::Ope){
+        return std::make_unique<EXPR_BI_AST>(Op,std::move(LHS),std::move(tmp));
+    }else if(BiOpPrecedence[Op]>=BiOpPrecedence[token_now.str]){
+        return std::make_unique<EXPR_BI_AST>(Op,std::move(LHS),std::move(tmp));
+    }else{
+        next_token();
+        return std::make_unique<EXPR_BI_AST>(Op,std::move(LHS),std::move(read_marge_RHS(next_op.str,std::move(tmp))));
+    }
+}
+
+std::unique_ptr<EXPR_BASE_AST> Parser::read_PrimaryExpr() {
+    std::unique_ptr<EXPR_BASE_AST> tmp;
+    switch (token_now.kind){
+        default:
+            return nullptr;
+        case Token_kind ::Integer_val:
+            tmp = std::make_unique<INT_EXPR_AST>(token_now.str);
+            next_token();
+            return tmp;
+        case Token_kind ::L_paren:
+            next_token();
+            tmp = read_Expr();
+            token_check_now(Token_kind::R_paren);
+            next_token();
+            return tmp;
+    }
 }
 
 //std::unique_ptr<EXPR_AST> Parser::read_Expr() {
@@ -256,11 +271,4 @@ void Parser::token_check_now(Token_kind k) {
 void Parser::token_check_next(Token_kind k) {
     next_token();
     token_check_now(k);
-}
-
-
-void Parser::test_lex() {
-    for (const Token &t : token_list) {
-        std::cout << int(t.kind) << std::endl;
-    }
 }

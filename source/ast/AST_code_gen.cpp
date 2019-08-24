@@ -41,6 +41,10 @@ llvm::Value* RET_STMT_AST::generate() {
     return Builder.CreateRet(expr->generate());
 }
 
+llvm::Value* EXPR_BI_AST::generate() {
+
+}
+
 //llvm::Value* EXPR_AST::generate() {
 //    if(expr== nullptr){
 //        return term->generate();
@@ -112,7 +116,7 @@ llvm::Value* RET_STMT_AST::generate() {
 
 
 
-Value* I32_EXPR_AST::generate() {
-    return ConstantInt::get(TheContext,APInt(32,val));
+Value* INT_EXPR_AST::generate() {
+    return ConstantInt::get(TheContext,APInt(32,val,10));
 }
 

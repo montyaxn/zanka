@@ -19,10 +19,14 @@ vector
 -
 memory
 -
+llvm/IR/Value.h
+-
 
 /home/montyaxn/work/zanka/source/parser/Parse.cpp
 Parse.h
 /home/montyaxn/work/zanka/source/parser/Parse.h
+map
+-
 
 /home/montyaxn/work/zanka/source/parser/Parse.h
 iostream
