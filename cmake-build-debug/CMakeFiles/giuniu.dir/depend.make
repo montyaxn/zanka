@@ -27,3 +27,6 @@ CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o: ../source/Type_def.h
 CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o: ../source/parser/lexer/Lex.cpp
 CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o: ../source/parser/lexer/Lex.h
 
+CMakeFiles/giuniu.dir/source/table/Table.cpp.o: ../source/table/Table.cpp
+CMakeFiles/giuniu.dir/source/table/Table.cpp.o: ../source/table/Table.h
+

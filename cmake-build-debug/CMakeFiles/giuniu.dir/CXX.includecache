@@ -15,18 +15,26 @@ Type_def.h
 /home/montyaxn/work/zanka/source/ast/AST.h
 string
 -
+utility
+-
 vector
 -
 memory
 -
 llvm/IR/Value.h
 -
+AST.h
+/home/montyaxn/work/zanka/source/ast/AST.h
 
-/home/montyaxn/work/zanka/source/parser/Parse.cpp
-Parse.h
-/home/montyaxn/work/zanka/source/parser/Parse.h
-map
+/home/montyaxn/work/zanka/source/main.cpp
+iostream
 -
+fstream
+-
+parser/lexer/Lex.h
+/home/montyaxn/work/zanka/source/parser/lexer/Lex.h
+parser/Parse.h
+/home/montyaxn/work/zanka/source/parser/Parse.h
 
 /home/montyaxn/work/zanka/source/parser/Parse.h
 iostream
@@ -41,4 +49,16 @@ memory
 /home/montyaxn/work/zanka/source/Token_def.h
 ../ast/AST.h
 /home/montyaxn/work/zanka/source/ast/AST.h
+
+/home/montyaxn/work/zanka/source/parser/lexer/Lex.h
+iostream
+-
+string
+-
+vector
+-
+../../Token_def.h
+/home/montyaxn/work/zanka/source/Token_def.h
+../../Type_def.h
+/home/montyaxn/work/zanka/source/Type_def.h
 

@@ -27,3 +27,6 @@ CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o
  /home/montyaxn/work/zanka/source/Type_def.h
  /home/montyaxn/work/zanka/source/parser/lexer/Lex.cpp
  /home/montyaxn/work/zanka/source/parser/lexer/Lex.h
+CMakeFiles/giuniu.dir/source/table/Table.cpp.o
+ /home/montyaxn/work/zanka/source/table/Table.cpp
+ /home/montyaxn/work/zanka/source/table/Table.h

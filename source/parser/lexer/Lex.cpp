@@ -167,7 +167,7 @@ std::vector<Token> Lex::tokenize() {
                     tmp.str = "==";
                     next_char();
                 } else{
-                    tmp.kind=Token_kind::Other;
+                    tmp.kind=Token_kind::Eq;
                 }
                 break;
             case Char_kind ::Less:

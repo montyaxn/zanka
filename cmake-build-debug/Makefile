@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/montyaxn/work/zanka/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/montyaxn/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -285,6 +285,33 @@ source/parser/lexer/Lex.cpp.s:
 	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.s
 .PHONY : source/parser/lexer/Lex.cpp.s
 
+source/table/Table.o: source/table/Table.cpp.o
+
+.PHONY : source/table/Table.o
+
+# target to build an object file
+source/table/Table.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/table/Table.cpp.o
+.PHONY : source/table/Table.cpp.o
+
+source/table/Table.i: source/table/Table.cpp.i
+
+.PHONY : source/table/Table.i
+
+# target to preprocess a source file
+source/table/Table.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/table/Table.cpp.i
+.PHONY : source/table/Table.cpp.i
+
+source/table/Table.s: source/table/Table.cpp.s
+
+.PHONY : source/table/Table.s
+
+# target to generate assembly for a file
+source/table/Table.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/table/Table.cpp.s
+.PHONY : source/table/Table.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... source/parser/lexer/Lex.o"
 	@echo "... source/parser/lexer/Lex.i"
 	@echo "... source/parser/lexer/Lex.s"
+	@echo "... source/table/Table.o"
+	@echo "... source/table/Table.i"
+	@echo "... source/table/Table.s"
 .PHONY : help
 
 

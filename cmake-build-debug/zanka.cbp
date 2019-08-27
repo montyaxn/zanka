@@ -120,6 +120,12 @@
 		<Unit filename="/home/montyaxn/work/zanka/source/parser/lexer/Lex.h">
 			<Option target="giuniu"/>
 		</Unit>
+		<Unit filename="/home/montyaxn/work/zanka/source/table/Table.cpp">
+			<Option target="giuniu"/>
+		</Unit>
+		<Unit filename="/home/montyaxn/work/zanka/source/table/Table.h">
+			<Option target="giuniu"/>
+		</Unit>
 		<Unit filename="/home/montyaxn/work/zanka/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

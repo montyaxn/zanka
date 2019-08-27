@@ -22,25 +22,32 @@ private:
     //トークン読み込み関係
     Token token_now;
     int now_counter = 0;
+
     void next_token();
+
     void token_check_next(Token_kind k);
+
     void token_check_now(Token_kind k);
 
 
     //LL文法解析
     void read_Program();
-    std::unique_ptr<DECL_BLOCK_AST> read_Decl_block();
-    std::unique_ptr<FUNC_DECL_AST> read_Func_decl();
-    void read_Args(std::unique_ptr<FUNC_DECL_AST>& f);
-    std::unique_ptr<RET_STMT_AST> read_Ret_stmt();
-    std::unique_ptr<EXPR_BASE_AST> read_Expr();
-    std::unique_ptr<EXPR_BASE_AST> read_PrimaryExpr();
-    std::unique_ptr<EXPR_BASE_AST> read_marge_RHS(std::string OpPre,std::unique_ptr<EXPR_BASE_AST> LHS);
-//    std::unique_ptr<EXPR_DASH_AST> read_Expr_Dash();
-//    std::unique_ptr<EXPR_T_AST> read_Expr_T();
-//    std::unique_ptr<EXPR_T_DASH_AST> read_Expr_T_DASH();
-//    std::unique_ptr<EXPR_F_AST> read_Expr_F();
 
+    std::unique_ptr<DECL_BLOCK_AST> read_Decl_block();
+
+    std::unique_ptr<FUNC_DECL_AST> read_Func_decl();
+
+    void read_Args_Decl(std::unique_ptr<FUNC_DECL_AST> &f);
+    std::vector<std::unique_ptr<EXPR_BASE_AST>> read_Args();
+
+    std::unique_ptr<RET_STMT_AST> read_Ret_stmt();
+    std::unique_ptr<VAR_INIT_STMT_AST> read_Var_init_stmt();
+
+    std::unique_ptr<EXPR_BASE_AST> read_Expr();
+
+    std::unique_ptr<EXPR_BASE_AST> read_PrimaryExpr();
+
+    std::unique_ptr<EXPR_BASE_AST> read_marge_RHS(std::string OpPre, std::unique_ptr<EXPR_BASE_AST> LHS);
 
 
 public:
