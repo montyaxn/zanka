@@ -28,7 +28,7 @@ void Parser::initialize_BiOpPrecedence() {
 
 void Parser::parse() {
     read_Program();
-    return ;
+    return;
 }
 
 //
@@ -55,7 +55,7 @@ std::unique_ptr<FUNC_DECL_AST> Parser::read_Func_decl() {
                 next_token();
                 tmp->add_stmt(read_Ret_stmt());
                 break;
-            case Token_kind ::Let:
+            case Token_kind::Let:
                 next_token();
                 tmp->add_stmt(read_Var_init_stmt());
                 break;
@@ -174,20 +174,28 @@ std::unique_ptr<EXPR_BASE_AST> Parser::read_PrimaryExpr() {
             tmp = std::make_unique<INT_EXPR_AST>(token_now.str);
             next_token();
             return tmp;
+        case Token_kind::Char_val:
+            tmp = std::make_unique<CHAR_EXPR_AST>(token_now.str);
+            next_token();
+            return tmp;
+        case Token_kind::String_val:
+            tmp = std::make_unique<STRING_EXPR_AST>(token_now.str);
+            next_token();
+            return tmp;
         case Token_kind::L_paren:
             next_token();
             tmp = read_Expr();
             token_check_now(Token_kind::R_paren);
             next_token();
             return tmp;
-        case Token_kind ::Ident:
+        case Token_kind::Ident:
             auto name = token_now.str;
             next_token();
-            if(token_now.kind==Token_kind::L_paren){
+            if (token_now.kind == Token_kind::L_paren) {
                 next_token();
-                tmp = std::make_unique<FUNC_EXPR_AST>(std::move(name),std::move(read_Args()));
+                tmp = std::make_unique<FUNC_EXPR_AST>(std::move(name), std::move(read_Args()));
                 return tmp;
-            }else{
+            } else {
                 tmp = std::make_unique<VAR_EXPR_AST>(std::move(name));
                 return tmp;
             }
@@ -196,7 +204,7 @@ std::unique_ptr<EXPR_BASE_AST> Parser::read_PrimaryExpr() {
 
 std::vector<std::unique_ptr<EXPR_BASE_AST>> Parser::read_Args() {
     auto tmp = std::vector<std::unique_ptr<EXPR_BASE_AST>>();
-    while(token_now.kind!=Token_kind::R_paren){
+    while (token_now.kind != Token_kind::R_paren) {
         tmp.push_back(read_Expr());
         token_check_next(Token_kind::Comma);
         next_token();
@@ -230,12 +238,14 @@ std::unique_ptr<VAR_INIT_STMT_AST> Parser::read_Var_init_stmt() {
     auto name = token_now.str;
     token_check_next(Token_kind::Colon);
     next_token();
-    if(token_now.str=="Int"){
+    if (token_now.str == "Int") {
         token_check_next(Token_kind::Eq);
         next_token();
-        return std::make_unique<VAR_INIT_STMT_AST>(name,"Int",read_Expr());
-    }
-    else{
+        auto val = read_Expr();
+        token_check_now(Token_kind::Semi_colon);
+        next_token();
+        return std::make_unique<VAR_INIT_STMT_AST>(name, "Int", std::move(val));
+    } else {
         return nullptr;
     }
 }

@@ -64,30 +64,34 @@ public:
 
 };
 
-class EXPR_BASE_AST : public BASE_AST{
+class EXPR_BASE_AST : public BASE_AST {
 public:
-    virtual llvm::Value* generate() = 0;
+    virtual llvm::Value *generate() = 0;
 };
 
-class EXPR_VALUE_BASE_AST : public EXPR_BASE_AST{
+class EXPR_VALUE_BASE_AST : public EXPR_BASE_AST {
 
 };
 
 
 class VAR_EXPR_AST : public EXPR_VALUE_BASE_AST {
 public:
-    explicit VAR_EXPR_AST( std::string name) : name(std::move(name)){}
-    llvm::Value* generate() override;
+    explicit VAR_EXPR_AST(std::string name) : name(std::move(name)) {}
+
+    llvm::Value *generate() override;
+
 private:
     std::string name;
 };
 
 class FUNC_EXPR_AST : public EXPR_VALUE_BASE_AST {
 public:
-    FUNC_EXPR_AST(std::string callee, std::vector<std::unique_ptr<EXPR_BASE_AST>> args) : callee(std::move(callee)),args(std::move(args)){}
+    FUNC_EXPR_AST(std::string callee, std::vector<std::unique_ptr<EXPR_BASE_AST>> args) : callee(std::move(callee)),
+                                                                                          args(std::move(args)) {}
 
 private:
-    llvm::Value* generate() override;
+    llvm::Value *generate() override;
+
     std::string callee;
     std::vector<std::unique_ptr<EXPR_BASE_AST>> args;
 };
@@ -98,7 +102,25 @@ private:
 public:
     explicit INT_EXPR_AST(std::string val) : val(std::move(val)) {}
 
-    llvm::Value * generate() override;
+    llvm::Value *generate() override;
+};
+
+class CHAR_EXPR_AST : public EXPR_VALUE_BASE_AST {
+private:
+    char val;
+public:
+    explicit CHAR_EXPR_AST(std::string val) : val(std::move(val[0])) {}
+
+    llvm::Value *generate() override;
+};
+
+class STRING_EXPR_AST : public EXPR_VALUE_BASE_AST {
+private:
+    std::string val;
+public:
+    explicit STRING_EXPR_AST(std::string val) : val(std::move(val)) {}
+
+    llvm::Value *generate() override;
 };
 
 class EXPR_BI_AST : public EXPR_BASE_AST {
@@ -106,9 +128,10 @@ class EXPR_BI_AST : public EXPR_BASE_AST {
     std::unique_ptr<EXPR_BASE_AST> LHS, RHS;
 
 public:
-    llvm::Value* generate() override;
+    llvm::Value *generate() override;
+
     EXPR_BI_AST(std::string ope, std::unique_ptr<EXPR_BASE_AST> LHS,
-                  std::unique_ptr<EXPR_BASE_AST> RHS)
+                std::unique_ptr<EXPR_BASE_AST> RHS)
             : ope(std::move(ope)), LHS(std::move(LHS)), RHS(std::move(RHS)) {}
 };
 
@@ -121,13 +144,15 @@ public:
 
 };
 
-class VAR_INIT_STMT_AST : public BASE_AST{
+class VAR_INIT_STMT_AST : public BASE_AST {
 private:
     std::string name;
     std::string type;
     std::unique_ptr<EXPR_BASE_AST> expr;
 public:
-    VAR_INIT_STMT_AST(std::string n,std::string t,std::unique_ptr<EXPR_BASE_AST> e):name(std::move(n)),type(std::move(t)),expr(std::move(e)){}
+    VAR_INIT_STMT_AST(std::string n, std::string t, std::unique_ptr<EXPR_BASE_AST> e) : name(std::move(n)),
+                                                                                        type(std::move(t)),
+                                                                                        expr(std::move(e)) {}
 
 };
 

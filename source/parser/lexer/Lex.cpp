@@ -11,7 +11,7 @@ Lex::Lex(std::string file) : file_length(file.length()) {
 }
 
 void Lex::make_charKind_T() {
-    for (auto & i : charKind_T) {
+    for (auto &i : charKind_T) {
         i = Char_kind::Other;
     }
 
@@ -50,6 +50,8 @@ void Lex::make_charKind_T() {
     charKind_T[')'] = Char_kind::R_paren;
     charKind_T['{'] = Char_kind::L_brace;
     charKind_T['}'] = Char_kind::R_brace;
+    charKind_T['"'] = Char_kind::Quot;
+    charKind_T['\''] = Char_kind::SQuot;
 }
 
 void Lex::next_char() {
@@ -87,6 +89,8 @@ std::vector<Token> Lex::tokenize() {
                     tmp.kind = Token_kind::Map;
                 } else if (tmp.str == "return") {
                     tmp.kind = Token_kind::Return;
+                } else if (tmp.str == "let") {
+                    tmp.kind = Token_kind::Let;
                 } else {
                     tmp.kind = Token_kind::Ident;
                 }
@@ -135,62 +139,81 @@ std::vector<Token> Lex::tokenize() {
                 tmp.kind = Token_kind::Period;
                 next_char();
                 break;
-            case Char_kind ::Plus:
-                tmp.kind = Token_kind ::Ope;
+            case Char_kind::Plus:
+                tmp.kind = Token_kind::Ope;
                 tmp.str = "+";
                 next_char();
                 break;
-            case Char_kind ::Minus:
+            case Char_kind::Minus:
                 next_char();
-                if(ck==Char_kind::Gtr){
-                    tmp.kind=Token_kind ::Arrow;
+                if (ck == Char_kind::Gtr) {
+                    tmp.kind = Token_kind::Arrow;
                     next_char();
-                } else{
-                    tmp.kind=Token_kind ::Ope;
+                } else {
+                    tmp.kind = Token_kind::Ope;
                     tmp.str = "-";
                 }
                 break;
-            case Char_kind ::Mult:
-                tmp.kind=Token_kind ::Ope; //*
+            case Char_kind::Mult:
+                tmp.kind = Token_kind::Ope; //*
                 tmp.str = "*";
                 next_char();
                 break;
-            case Char_kind ::Div:
-                tmp.kind=Token_kind ::Ope; // /
+            case Char_kind::Div:
+                tmp.kind = Token_kind::Ope; // /
                 tmp.str = "/";
                 next_char();
                 break;
             case Char_kind::Eq:
                 next_char();
-                if(ck==Char_kind::Eq) {
+                if (ck == Char_kind::Eq) {
                     tmp.kind = Token_kind::Ope; //==
                     tmp.str = "==";
                     next_char();
-                } else{
-                    tmp.kind=Token_kind::Eq;
+                } else {
+                    tmp.kind = Token_kind::Eq;
                 }
                 break;
-            case Char_kind ::Less:
+            case Char_kind::Less:
                 next_char();
-                if(ck==Char_kind::Eq){
-                    tmp.kind = Token_kind ::Ope;
+                if (ck == Char_kind::Eq) {
+                    tmp.kind = Token_kind::Ope;
                     tmp.str = "<=";
                     next_char();
-                } else{
-                    tmp.kind = Token_kind ::Ope;
+                } else {
+                    tmp.kind = Token_kind::Ope;
                     tmp.str = "<";
                 }
                 break;
-            case Char_kind ::Gtr:
+            case Char_kind::Gtr:
                 next_char();
-                if(ck == Char_kind::Eq){
-                    tmp.kind = Token_kind ::Ope;
+                if (ck == Char_kind::Eq) {
+                    tmp.kind = Token_kind::Ope;
                     tmp.str = ">=";
                     next_char();
-                } else{
-                    tmp.kind = Token_kind ::Ope;
+                } else {
+                    tmp.kind = Token_kind::Ope;
                     tmp.str = ">";
                 }
+                break;
+            case Char_kind::Quot:
+                next_char();
+                tmp.str = "";
+                tmp.kind = Token_kind::String_val;
+                while (ck != Char_kind::Quot) {
+                    tmp.str.push_back(ch);
+                    next_char();
+                }
+                next_char();
+                break;
+            case Char_kind::SQuot:
+                next_char();
+                tmp.kind = Token_kind::Char_val;
+                tmp.str = "";
+                tmp.str.push_back(ch);
+                next_char();
+                if (ck != Char_kind::SQuot) std::cout << "error" << std::endl;
+                next_char();
                 break;
 
             case Char_kind::End_of_file:

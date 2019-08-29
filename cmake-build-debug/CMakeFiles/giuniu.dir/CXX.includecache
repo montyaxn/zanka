@@ -6,13 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/montyaxn/work/zanka/source/Token_def.h
+/home/montyaxn/data/zanka/source/Token_def.h
 Type_def.h
-/home/montyaxn/work/zanka/source/Type_def.h
+/home/montyaxn/data/zanka/source/Type_def.h
 
-/home/montyaxn/work/zanka/source/Type_def.h
+/home/montyaxn/data/zanka/source/Type_def.h
 
-/home/montyaxn/work/zanka/source/ast/AST.h
+/home/montyaxn/data/zanka/source/ast/AST.cpp
+AST.h
+/home/montyaxn/data/zanka/source/ast/AST.h
+vector
+-
+
+/home/montyaxn/data/zanka/source/ast/AST.h
 string
 -
 utility
@@ -24,19 +30,55 @@ memory
 llvm/IR/Value.h
 -
 AST.h
-/home/montyaxn/work/zanka/source/ast/AST.h
+/home/montyaxn/data/zanka/source/ast/AST.h
 
-/home/montyaxn/work/zanka/source/main.cpp
+/home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp
+llvm/ADT/APFloat.h
+/home/montyaxn/data/zanka/source/ast/llvm/ADT/APFloat.h
+llvm/ADT/APInt.h
+/home/montyaxn/data/zanka/source/ast/llvm/ADT/APInt.h
+llvm/ADT/STLExtras.h
+/home/montyaxn/data/zanka/source/ast/llvm/ADT/STLExtras.h
+llvm/IR/BasicBlock.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/BasicBlock.h
+llvm/IR/Constants.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/Constants.h
+llvm/IR/DerivedTypes.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/DerivedTypes.h
+llvm/IR/Function.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/Function.h
+llvm/IR/IRBuilder.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/IRBuilder.h
+llvm/IR/LLVMContext.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/LLVMContext.h
+llvm/IR/Module.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/Module.h
+llvm/IR/Type.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/Type.h
+llvm/IR/Verifier.h
+/home/montyaxn/data/zanka/source/ast/llvm/IR/Verifier.h
+AST.h
+/home/montyaxn/data/zanka/source/ast/AST.h
+
+/home/montyaxn/data/zanka/source/main.cpp
 iostream
 -
 fstream
 -
 parser/lexer/Lex.h
-/home/montyaxn/work/zanka/source/parser/lexer/Lex.h
+/home/montyaxn/data/zanka/source/parser/lexer/Lex.h
 parser/Parse.h
-/home/montyaxn/work/zanka/source/parser/Parse.h
+/home/montyaxn/data/zanka/source/parser/Parse.h
 
-/home/montyaxn/work/zanka/source/parser/Parse.h
+/home/montyaxn/data/zanka/source/parser/Parse.cpp
+Parse.h
+/home/montyaxn/data/zanka/source/parser/Parse.h
+map
+-
+string
+-
+
+/home/montyaxn/data/zanka/source/parser/Parse.h
 iostream
 -
 string
@@ -46,11 +88,11 @@ vector
 memory
 -
 ../Token_def.h
-/home/montyaxn/work/zanka/source/Token_def.h
+/home/montyaxn/data/zanka/source/Token_def.h
 ../ast/AST.h
-/home/montyaxn/work/zanka/source/ast/AST.h
+/home/montyaxn/data/zanka/source/ast/AST.h
 
-/home/montyaxn/work/zanka/source/parser/lexer/Lex.h
+/home/montyaxn/data/zanka/source/parser/lexer/Lex.h
 iostream
 -
 string
@@ -58,7 +100,7 @@ string
 vector
 -
 ../../Token_def.h
-/home/montyaxn/work/zanka/source/Token_def.h
+/home/montyaxn/data/zanka/source/Token_def.h
 ../../Type_def.h
-/home/montyaxn/work/zanka/source/Type_def.h
+/home/montyaxn/data/zanka/source/Type_def.h
 

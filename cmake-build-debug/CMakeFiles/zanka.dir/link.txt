@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/zanka.dir/main.cpp.o CMakeFiles/zanka.dir/AST.cpp.o CMakeFiles/zanka.dir/Lex.cpp.o  -o zanka 

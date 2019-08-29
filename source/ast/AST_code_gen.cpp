@@ -4,6 +4,7 @@
 
 
 #include "llvm/ADT/APFloat.h"
+#include "llvm/ADT/APInt.h"
 #include "llvm/ADT/STLExtras.h"
 #include "llvm/IR/BasicBlock.h"
 #include "llvm/IR/Constants.h"
@@ -34,14 +35,35 @@ llvm::Value *EXPR_BI_AST::generate() {
 }
 
 Value *INT_EXPR_AST::generate() {
-    return ConstantInt::get(TheContext, APInt(32, val, 10));
+    return ConstantInt::get(TheContext, APInt(32, llvm::StringRef(val), (uint8_t)10));
+}
+
+Value *CHAR_EXPR_AST::generate()  {
+    return nullptr;
+}
+
+Value *STRING_EXPR_AST::generate()  {
+    return nullptr;
 }
 
 llvm::Value* VAR_EXPR_AST::generate() {
     return nullptr;
 }
 
-llvm::Value* FUNC_EXPR_AST::generate() {
-    return nullptr;
-}
 
+Value *FUNC_EXPR_AST::generate() {
+    // Look up the name in the global module table.
+    Function *CalleeF = TheModule->getFunction(callee);
+
+    if (CalleeF->arg_size() != args.size())
+        return nullptr;
+
+    std::vector<Value *> argsV;
+    for (unsigned i = 0, e = args.size(); i != e; ++i) {
+        argsV.push_back(args[i]->generate());
+        if (!argsV.back())
+            return nullptr;
+    }
+
+    return Builder.CreateCall(CalleeF, argsV, "calltmp");
+}

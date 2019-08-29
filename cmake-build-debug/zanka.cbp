@@ -4,129 +4,121 @@
 	<Project>
 		<Option title="zanka"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="clang"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/montyaxn/work/zanka/cmake-build-debug"/>
+				<Option working_dir="/home/montyaxn/data/zanka/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/montyaxn/work/zanka/cmake-build-debug"/>
+				<Option working_dir="/home/montyaxn/data/zanka/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="giuniu">
-				<Option output="/home/montyaxn/work/zanka/cmake-build-debug/giuniu" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/montyaxn/work/zanka/cmake-build-debug"/>
+				<Option output="/home/montyaxn/data/zanka/cmake-build-debug/giuniu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/montyaxn/data/zanka/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/local/lib/clang/10.0.0/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 giuniu"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 giuniu"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="giuniu/fast">
-				<Option output="/home/montyaxn/work/zanka/cmake-build-debug/giuniu" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/montyaxn/work/zanka/cmake-build-debug"/>
+				<Option output="/home/montyaxn/data/zanka/cmake-build-debug/giuniu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/montyaxn/data/zanka/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/local/lib/clang/10.0.0/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 giuniu/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 giuniu/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/montyaxn/work/zanka/cmake-build-debug"/>
+				<Option working_dir="/home/montyaxn/data/zanka/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/montyaxn/work/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/montyaxn/data/zanka/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/montyaxn/work/zanka/source/Token_def.h">
+		<Unit filename="/home/montyaxn/data/zanka/source/Token_def.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/Type_def.h">
+		<Unit filename="/home/montyaxn/data/zanka/source/Type_def.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/source/ast/AST.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST.h">
+		<Unit filename="/home/montyaxn/data/zanka/source/ast/AST.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/ast/AST_code_gen.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/code_gen/code_gen.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/source/main.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/code_gen/code_gen.h">
+		<Unit filename="/home/montyaxn/data/zanka/source/parser/Parse.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/main.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/source/parser/Parse.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/parser/Parse.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/source/parser/lexer/Lex.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/parser/Parse.h">
+		<Unit filename="/home/montyaxn/data/zanka/source/parser/lexer/Lex.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/parser/lexer/Lex.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/source/table/Table.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/parser/lexer/Lex.h">
+		<Unit filename="/home/montyaxn/data/zanka/source/table/Table.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/table/Table.cpp">
-			<Option target="giuniu"/>
-		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/source/table/Table.h">
-			<Option target="giuniu"/>
-		</Unit>
-		<Unit filename="/home/montyaxn/work/zanka/CMakeLists.txt">
+		<Unit filename="/home/montyaxn/data/zanka/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
