@@ -5,7 +5,7 @@
 #ifndef ZANKA_TOKEN_DEF_H
 #define ZANKA_TOKEN_DEF_H
 
-#include "Type_def.h"
+#include <map>
 
 enum class Token_kind {
     Ident,
@@ -29,6 +29,8 @@ enum class Token_kind {
     End,
     Other,
 };
+
+
 
 struct Token {
     Token_kind kind;

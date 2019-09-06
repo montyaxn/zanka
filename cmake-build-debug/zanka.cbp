@@ -82,40 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/montyaxn/data/zanka/source/Token_def.h">
+		<Unit filename="/home/montyaxn/data/zanka/src/Token_def.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/Type_def.h">
+		<Unit filename="/home/montyaxn/data/zanka/src/ast/AST.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/ast/AST.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/src/ast/AST.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/ast/AST.h">
+		<Unit filename="/home/montyaxn/data/zanka/src/ast/AST_code_gen.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/src/llvm_static_decl.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/main.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/src/main.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/parser/Parse.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/src/parser/Parse.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/parser/Parse.h">
+		<Unit filename="/home/montyaxn/data/zanka/src/parser/Parse.h">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/parser/lexer/Lex.cpp">
+		<Unit filename="/home/montyaxn/data/zanka/src/parser/lexer/Lex.cpp">
 			<Option target="giuniu"/>
 		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/parser/lexer/Lex.h">
-			<Option target="giuniu"/>
-		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/table/Table.cpp">
-			<Option target="giuniu"/>
-		</Unit>
-		<Unit filename="/home/montyaxn/data/zanka/source/table/Table.h">
+		<Unit filename="/home/montyaxn/data/zanka/src/parser/lexer/Lex.h">
 			<Option target="giuniu"/>
 		</Unit>
 		<Unit filename="/home/montyaxn/data/zanka/CMakeLists.txt">

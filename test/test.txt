@@ -1,3 +1,7 @@
-map main:(argc:Int)->Int{
-    return 32+(2+44);
+map plus1:(x:I32)->I32{
+    return x+1;
+}
+
+map main:(){
+    return plus1(5);
 }

@@ -123,167 +123,140 @@ giuniu/fast:
 	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/build
 .PHONY : giuniu/fast
 
-source/ast/AST.o: source/ast/AST.cpp.o
+src/ast/AST.o: src/ast/AST.cpp.o
 
-.PHONY : source/ast/AST.o
-
-# target to build an object file
-source/ast/AST.cpp.o:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST.cpp.o
-.PHONY : source/ast/AST.cpp.o
-
-source/ast/AST.i: source/ast/AST.cpp.i
-
-.PHONY : source/ast/AST.i
-
-# target to preprocess a source file
-source/ast/AST.cpp.i:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST.cpp.i
-.PHONY : source/ast/AST.cpp.i
-
-source/ast/AST.s: source/ast/AST.cpp.s
-
-.PHONY : source/ast/AST.s
-
-# target to generate assembly for a file
-source/ast/AST.cpp.s:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST.cpp.s
-.PHONY : source/ast/AST.cpp.s
-
-source/ast/AST_code_gen.o: source/ast/AST_code_gen.cpp.o
-
-.PHONY : source/ast/AST_code_gen.o
+.PHONY : src/ast/AST.o
 
 # target to build an object file
-source/ast/AST_code_gen.cpp.o:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o
-.PHONY : source/ast/AST_code_gen.cpp.o
+src/ast/AST.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/ast/AST.cpp.o
+.PHONY : src/ast/AST.cpp.o
 
-source/ast/AST_code_gen.i: source/ast/AST_code_gen.cpp.i
+src/ast/AST.i: src/ast/AST.cpp.i
 
-.PHONY : source/ast/AST_code_gen.i
+.PHONY : src/ast/AST.i
 
 # target to preprocess a source file
-source/ast/AST_code_gen.cpp.i:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.i
-.PHONY : source/ast/AST_code_gen.cpp.i
+src/ast/AST.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/ast/AST.cpp.i
+.PHONY : src/ast/AST.cpp.i
 
-source/ast/AST_code_gen.s: source/ast/AST_code_gen.cpp.s
+src/ast/AST.s: src/ast/AST.cpp.s
 
-.PHONY : source/ast/AST_code_gen.s
+.PHONY : src/ast/AST.s
 
 # target to generate assembly for a file
-source/ast/AST_code_gen.cpp.s:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.s
-.PHONY : source/ast/AST_code_gen.cpp.s
+src/ast/AST.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/ast/AST.cpp.s
+.PHONY : src/ast/AST.cpp.s
 
-source/main.o: source/main.cpp.o
+src/ast/AST_code_gen.o: src/ast/AST_code_gen.cpp.o
 
-.PHONY : source/main.o
+.PHONY : src/ast/AST_code_gen.o
 
 # target to build an object file
-source/main.cpp.o:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/main.cpp.o
-.PHONY : source/main.cpp.o
+src/ast/AST_code_gen.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o
+.PHONY : src/ast/AST_code_gen.cpp.o
 
-source/main.i: source/main.cpp.i
+src/ast/AST_code_gen.i: src/ast/AST_code_gen.cpp.i
 
-.PHONY : source/main.i
+.PHONY : src/ast/AST_code_gen.i
 
 # target to preprocess a source file
-source/main.cpp.i:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/main.cpp.i
-.PHONY : source/main.cpp.i
+src/ast/AST_code_gen.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.i
+.PHONY : src/ast/AST_code_gen.cpp.i
 
-source/main.s: source/main.cpp.s
+src/ast/AST_code_gen.s: src/ast/AST_code_gen.cpp.s
 
-.PHONY : source/main.s
+.PHONY : src/ast/AST_code_gen.s
 
 # target to generate assembly for a file
-source/main.cpp.s:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/main.cpp.s
-.PHONY : source/main.cpp.s
+src/ast/AST_code_gen.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.s
+.PHONY : src/ast/AST_code_gen.cpp.s
 
-source/parser/Parse.o: source/parser/Parse.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : source/parser/Parse.o
+.PHONY : src/main.o
 
 # target to build an object file
-source/parser/Parse.cpp.o:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o
-.PHONY : source/parser/Parse.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-source/parser/Parse.i: source/parser/Parse.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : source/parser/Parse.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-source/parser/Parse.cpp.i:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/Parse.cpp.i
-.PHONY : source/parser/Parse.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-source/parser/Parse.s: source/parser/Parse.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : source/parser/Parse.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-source/parser/Parse.cpp.s:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/Parse.cpp.s
-.PHONY : source/parser/Parse.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-source/parser/lexer/Lex.o: source/parser/lexer/Lex.cpp.o
+src/parser/Parse.o: src/parser/Parse.cpp.o
 
-.PHONY : source/parser/lexer/Lex.o
+.PHONY : src/parser/Parse.o
 
 # target to build an object file
-source/parser/lexer/Lex.cpp.o:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o
-.PHONY : source/parser/lexer/Lex.cpp.o
+src/parser/Parse.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o
+.PHONY : src/parser/Parse.cpp.o
 
-source/parser/lexer/Lex.i: source/parser/lexer/Lex.cpp.i
+src/parser/Parse.i: src/parser/Parse.cpp.i
 
-.PHONY : source/parser/lexer/Lex.i
+.PHONY : src/parser/Parse.i
 
 # target to preprocess a source file
-source/parser/lexer/Lex.cpp.i:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.i
-.PHONY : source/parser/lexer/Lex.cpp.i
+src/parser/Parse.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/parser/Parse.cpp.i
+.PHONY : src/parser/Parse.cpp.i
 
-source/parser/lexer/Lex.s: source/parser/lexer/Lex.cpp.s
+src/parser/Parse.s: src/parser/Parse.cpp.s
 
-.PHONY : source/parser/lexer/Lex.s
+.PHONY : src/parser/Parse.s
 
 # target to generate assembly for a file
-source/parser/lexer/Lex.cpp.s:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.s
-.PHONY : source/parser/lexer/Lex.cpp.s
+src/parser/Parse.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/parser/Parse.cpp.s
+.PHONY : src/parser/Parse.cpp.s
 
-source/table/Table.o: source/table/Table.cpp.o
+src/parser/lexer/Lex.o: src/parser/lexer/Lex.cpp.o
 
-.PHONY : source/table/Table.o
+.PHONY : src/parser/lexer/Lex.o
 
 # target to build an object file
-source/table/Table.cpp.o:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/table/Table.cpp.o
-.PHONY : source/table/Table.cpp.o
+src/parser/lexer/Lex.cpp.o:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o
+.PHONY : src/parser/lexer/Lex.cpp.o
 
-source/table/Table.i: source/table/Table.cpp.i
+src/parser/lexer/Lex.i: src/parser/lexer/Lex.cpp.i
 
-.PHONY : source/table/Table.i
+.PHONY : src/parser/lexer/Lex.i
 
 # target to preprocess a source file
-source/table/Table.cpp.i:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/table/Table.cpp.i
-.PHONY : source/table/Table.cpp.i
+src/parser/lexer/Lex.cpp.i:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.i
+.PHONY : src/parser/lexer/Lex.cpp.i
 
-source/table/Table.s: source/table/Table.cpp.s
+src/parser/lexer/Lex.s: src/parser/lexer/Lex.cpp.s
 
-.PHONY : source/table/Table.s
+.PHONY : src/parser/lexer/Lex.s
 
 # target to generate assembly for a file
-source/table/Table.cpp.s:
-	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/source/table/Table.cpp.s
-.PHONY : source/table/Table.cpp.s
+src/parser/lexer/Lex.cpp.s:
+	$(MAKE) -f CMakeFiles/giuniu.dir/build.make CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.s
+.PHONY : src/parser/lexer/Lex.cpp.s
 
 # Help Target
 help:
@@ -294,24 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... giuniu"
 	@echo "... edit_cache"
-	@echo "... source/ast/AST.o"
-	@echo "... source/ast/AST.i"
-	@echo "... source/ast/AST.s"
-	@echo "... source/ast/AST_code_gen.o"
-	@echo "... source/ast/AST_code_gen.i"
-	@echo "... source/ast/AST_code_gen.s"
-	@echo "... source/main.o"
-	@echo "... source/main.i"
-	@echo "... source/main.s"
-	@echo "... source/parser/Parse.o"
-	@echo "... source/parser/Parse.i"
-	@echo "... source/parser/Parse.s"
-	@echo "... source/parser/lexer/Lex.o"
-	@echo "... source/parser/lexer/Lex.i"
-	@echo "... source/parser/lexer/Lex.s"
-	@echo "... source/table/Table.o"
-	@echo "... source/table/Table.i"
-	@echo "... source/table/Table.s"
+	@echo "... src/ast/AST.o"
+	@echo "... src/ast/AST.i"
+	@echo "... src/ast/AST.s"
+	@echo "... src/ast/AST_code_gen.o"
+	@echo "... src/ast/AST_code_gen.i"
+	@echo "... src/ast/AST_code_gen.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/parser/Parse.o"
+	@echo "... src/parser/Parse.i"
+	@echo "... src/parser/Parse.s"
+	@echo "... src/parser/lexer/Lex.o"
+	@echo "... src/parser/lexer/Lex.i"
+	@echo "... src/parser/lexer/Lex.s"
 .PHONY : help
 
 

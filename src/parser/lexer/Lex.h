@@ -9,7 +9,6 @@
 #include <string>
 #include <vector>
 #include "../../Token_def.h"
-#include "../../Type_def.h"
 
 class Lex {
 private:

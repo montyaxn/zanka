@@ -57,105 +57,90 @@ include CMakeFiles/giuniu.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/giuniu.dir/flags.make
 
-CMakeFiles/giuniu.dir/source/main.cpp.o: CMakeFiles/giuniu.dir/flags.make
-CMakeFiles/giuniu.dir/source/main.cpp.o: ../source/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/giuniu.dir/source/main.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/source/main.cpp.o -c /home/montyaxn/data/zanka/source/main.cpp
+CMakeFiles/giuniu.dir/src/main.cpp.o: CMakeFiles/giuniu.dir/flags.make
+CMakeFiles/giuniu.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/giuniu.dir/src/main.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/src/main.cpp.o -c /home/montyaxn/data/zanka/src/main.cpp
 
-CMakeFiles/giuniu.dir/source/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/source/main.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/source/main.cpp > CMakeFiles/giuniu.dir/source/main.cpp.i
+CMakeFiles/giuniu.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/src/main.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/src/main.cpp > CMakeFiles/giuniu.dir/src/main.cpp.i
 
-CMakeFiles/giuniu.dir/source/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/source/main.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/source/main.cpp -o CMakeFiles/giuniu.dir/source/main.cpp.s
+CMakeFiles/giuniu.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/src/main.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/src/main.cpp -o CMakeFiles/giuniu.dir/src/main.cpp.s
 
-CMakeFiles/giuniu.dir/source/ast/AST.cpp.o: CMakeFiles/giuniu.dir/flags.make
-CMakeFiles/giuniu.dir/source/ast/AST.cpp.o: ../source/ast/AST.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/giuniu.dir/source/ast/AST.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/source/ast/AST.cpp.o -c /home/montyaxn/data/zanka/source/ast/AST.cpp
+CMakeFiles/giuniu.dir/src/ast/AST.cpp.o: CMakeFiles/giuniu.dir/flags.make
+CMakeFiles/giuniu.dir/src/ast/AST.cpp.o: ../src/ast/AST.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/giuniu.dir/src/ast/AST.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/src/ast/AST.cpp.o -c /home/montyaxn/data/zanka/src/ast/AST.cpp
 
-CMakeFiles/giuniu.dir/source/ast/AST.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/source/ast/AST.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/source/ast/AST.cpp > CMakeFiles/giuniu.dir/source/ast/AST.cpp.i
+CMakeFiles/giuniu.dir/src/ast/AST.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/src/ast/AST.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/src/ast/AST.cpp > CMakeFiles/giuniu.dir/src/ast/AST.cpp.i
 
-CMakeFiles/giuniu.dir/source/ast/AST.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/source/ast/AST.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/source/ast/AST.cpp -o CMakeFiles/giuniu.dir/source/ast/AST.cpp.s
+CMakeFiles/giuniu.dir/src/ast/AST.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/src/ast/AST.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/src/ast/AST.cpp -o CMakeFiles/giuniu.dir/src/ast/AST.cpp.s
 
-CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o: CMakeFiles/giuniu.dir/flags.make
-CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o: ../source/parser/lexer/Lex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o -c /home/montyaxn/data/zanka/source/parser/lexer/Lex.cpp
+CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o: CMakeFiles/giuniu.dir/flags.make
+CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o: ../src/parser/lexer/Lex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o -c /home/montyaxn/data/zanka/src/parser/lexer/Lex.cpp
 
-CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/source/parser/lexer/Lex.cpp > CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.i
+CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/src/parser/lexer/Lex.cpp > CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.i
 
-CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/source/parser/lexer/Lex.cpp -o CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.s
+CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/src/parser/lexer/Lex.cpp -o CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.s
 
-CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o: CMakeFiles/giuniu.dir/flags.make
-CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o: ../source/parser/Parse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o -c /home/montyaxn/data/zanka/source/parser/Parse.cpp
+CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o: CMakeFiles/giuniu.dir/flags.make
+CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o: ../src/parser/Parse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o -c /home/montyaxn/data/zanka/src/parser/Parse.cpp
 
-CMakeFiles/giuniu.dir/source/parser/Parse.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/source/parser/Parse.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/source/parser/Parse.cpp > CMakeFiles/giuniu.dir/source/parser/Parse.cpp.i
+CMakeFiles/giuniu.dir/src/parser/Parse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/src/parser/Parse.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/src/parser/Parse.cpp > CMakeFiles/giuniu.dir/src/parser/Parse.cpp.i
 
-CMakeFiles/giuniu.dir/source/parser/Parse.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/source/parser/Parse.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/source/parser/Parse.cpp -o CMakeFiles/giuniu.dir/source/parser/Parse.cpp.s
+CMakeFiles/giuniu.dir/src/parser/Parse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/src/parser/Parse.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/src/parser/Parse.cpp -o CMakeFiles/giuniu.dir/src/parser/Parse.cpp.s
 
-CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o: CMakeFiles/giuniu.dir/flags.make
-CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o: ../source/ast/AST_code_gen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o -c /home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp
+CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o: CMakeFiles/giuniu.dir/flags.make
+CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o: ../src/ast/AST_code_gen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o -c /home/montyaxn/data/zanka/src/ast/AST_code_gen.cpp
 
-CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp > CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.i
+CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/src/ast/AST_code_gen.cpp > CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.i
 
-CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp -o CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.s
-
-CMakeFiles/giuniu.dir/source/table/Table.cpp.o: CMakeFiles/giuniu.dir/flags.make
-CMakeFiles/giuniu.dir/source/table/Table.cpp.o: ../source/table/Table.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/giuniu.dir/source/table/Table.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/giuniu.dir/source/table/Table.cpp.o -c /home/montyaxn/data/zanka/source/table/Table.cpp
-
-CMakeFiles/giuniu.dir/source/table/Table.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/giuniu.dir/source/table/Table.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/montyaxn/data/zanka/source/table/Table.cpp > CMakeFiles/giuniu.dir/source/table/Table.cpp.i
-
-CMakeFiles/giuniu.dir/source/table/Table.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/source/table/Table.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/source/table/Table.cpp -o CMakeFiles/giuniu.dir/source/table/Table.cpp.s
+CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/montyaxn/data/zanka/src/ast/AST_code_gen.cpp -o CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.s
 
 # Object files for target giuniu
 giuniu_OBJECTS = \
-"CMakeFiles/giuniu.dir/source/main.cpp.o" \
-"CMakeFiles/giuniu.dir/source/ast/AST.cpp.o" \
-"CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o" \
-"CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o" \
-"CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o" \
-"CMakeFiles/giuniu.dir/source/table/Table.cpp.o"
+"CMakeFiles/giuniu.dir/src/main.cpp.o" \
+"CMakeFiles/giuniu.dir/src/ast/AST.cpp.o" \
+"CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o" \
+"CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o" \
+"CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o"
 
 # External object files for target giuniu
 giuniu_EXTERNAL_OBJECTS =
 
-giuniu: CMakeFiles/giuniu.dir/source/main.cpp.o
-giuniu: CMakeFiles/giuniu.dir/source/ast/AST.cpp.o
-giuniu: CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o
-giuniu: CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o
-giuniu: CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o
-giuniu: CMakeFiles/giuniu.dir/source/table/Table.cpp.o
+giuniu: CMakeFiles/giuniu.dir/src/main.cpp.o
+giuniu: CMakeFiles/giuniu.dir/src/ast/AST.cpp.o
+giuniu: CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o
+giuniu: CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o
+giuniu: CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o
 giuniu: CMakeFiles/giuniu.dir/build.make
 giuniu: CMakeFiles/giuniu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable giuniu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable giuniu"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/giuniu.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

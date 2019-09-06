@@ -4,12 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/montyaxn/data/zanka/source/ast/AST.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/ast/AST.cpp.o"
-  "/home/montyaxn/data/zanka/source/ast/AST_code_gen.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/ast/AST_code_gen.cpp.o"
-  "/home/montyaxn/data/zanka/source/main.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/main.cpp.o"
-  "/home/montyaxn/data/zanka/source/parser/Parse.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/parser/Parse.cpp.o"
-  "/home/montyaxn/data/zanka/source/parser/lexer/Lex.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/parser/lexer/Lex.cpp.o"
-  "/home/montyaxn/data/zanka/source/table/Table.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/source/table/Table.cpp.o"
+  "/home/montyaxn/data/zanka/src/ast/AST.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/src/ast/AST.cpp.o"
+  "/home/montyaxn/data/zanka/src/ast/AST_code_gen.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/src/ast/AST_code_gen.cpp.o"
+  "/home/montyaxn/data/zanka/src/main.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/src/main.cpp.o"
+  "/home/montyaxn/data/zanka/src/parser/Parse.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/src/parser/Parse.cpp.o"
+  "/home/montyaxn/data/zanka/src/parser/lexer/Lex.cpp" "/home/montyaxn/data/zanka/cmake-build-debug/CMakeFiles/giuniu.dir/src/parser/lexer/Lex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

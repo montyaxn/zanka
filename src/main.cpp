@@ -6,6 +6,8 @@
 
 
 
+
+
 int main(int argc,char** argv) {
     if(argc != 2) {
         std::cout << "Usage: giuniu file" << std::endl;
@@ -17,4 +19,6 @@ int main(int argc,char** argv) {
     Lex lex(target);
     Parser parser(lex.tokenize());
     parser.parse();
+    parser.program->generate();
+    return 0;
 }

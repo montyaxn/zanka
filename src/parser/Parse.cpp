@@ -11,6 +11,8 @@ static std::map<std::string, int> BiOpPrecedence;
 Parser::Parser(std::vector<Token> t) : token_list(std::move(t)) {
     next_token();
     initialize_BiOpPrecedence();
+    initialize_Token_kind_nameT();
+    return;
 }
 
 void Parser::initialize_BiOpPrecedence() {
@@ -24,6 +26,31 @@ void Parser::initialize_BiOpPrecedence() {
     BiOpPrecedence["*"] = 30;
     BiOpPrecedence["/"] = 30;
 }
+
+void Parser::initialize_Token_kind_nameT() {
+    Token_kind_nameT[static_cast<int>(Token_kind::Ident)] = "Ident";
+    Token_kind_nameT[static_cast<int>(Token_kind::Let)] = "Let";
+    Token_kind_nameT[static_cast<int>(Token_kind::Integer_val)] = "Integer_val";
+    Token_kind_nameT[static_cast<int>(Token_kind::String_val)] = "String_val";
+    Token_kind_nameT[static_cast<int>(Token_kind::Char_val)] = "Char_val";
+    Token_kind_nameT[static_cast<int>(Token_kind::Map)] = "Map";
+    Token_kind_nameT[static_cast<int>(Token_kind::Return)] = "Return";
+    Token_kind_nameT[static_cast<int>(Token_kind::Colon)] = "Colon";
+    Token_kind_nameT[static_cast<int>(Token_kind::Comma)] = "Comma";
+    Token_kind_nameT[static_cast<int>(Token_kind::Eq)] = "Eq";
+    Token_kind_nameT[static_cast<int>(Token_kind::Period)] = "Period";
+    Token_kind_nameT[static_cast<int>(Token_kind::Semi_colon)] = "Semi_colon";
+    Token_kind_nameT[static_cast<int>(Token_kind::Ope)] = "Ope";
+    Token_kind_nameT[static_cast<int>(Token_kind::R_paren)] = "R_paren";
+    Token_kind_nameT[static_cast<int>(Token_kind::L_paren)] = "L_paren";
+    Token_kind_nameT[static_cast<int>(Token_kind::R_brace)] = "R_brace";
+    Token_kind_nameT[static_cast<int>(Token_kind::L_brace)] = "L_brace";
+    Token_kind_nameT[static_cast<int>(Token_kind::Arrow)] = "Arrow";
+    Token_kind_nameT[static_cast<int>(Token_kind::End)] = "End";
+    Token_kind_nameT[static_cast<int>(Token_kind::Other)] = "Other";
+}
+
+
 
 
 void Parser::parse() {
@@ -73,6 +100,7 @@ std::unique_ptr<FUNC_DECL_AST> Parser::read_Func_decl() {
 
     return tmp;
 }
+
 
 void Parser::read_Args_Decl(std::unique_ptr<FUNC_DECL_AST> &f) {
     switch (token_now.kind) {
@@ -171,7 +199,7 @@ std::unique_ptr<EXPR_BASE_AST> Parser::read_PrimaryExpr() {
         default:
             return nullptr;
         case Token_kind::Integer_val:
-            tmp = std::make_unique<INT_EXPR_AST>(token_now.str);
+            tmp = std::make_unique<INT_EXPR_AST>(token_now.str, 32);
             next_token();
             return tmp;
         case Token_kind::Char_val:
@@ -206,10 +234,15 @@ std::vector<std::unique_ptr<EXPR_BASE_AST>> Parser::read_Args() {
     auto tmp = std::vector<std::unique_ptr<EXPR_BASE_AST>>();
     while (token_now.kind != Token_kind::R_paren) {
         tmp.push_back(read_Expr());
-        token_check_next(Token_kind::Comma);
-        next_token();
+        if (token_now.kind == Token_kind::R_paren) {
+            next_token();
+            goto end;
+        } else {
+            token_check_now(Token_kind::Comma);
+            next_token();
+        }
     }
-    next_token();
+    end:
     return tmp;
 }
 
@@ -223,7 +256,8 @@ void Parser::next_token() {
 
 void Parser::token_check_now(Token_kind k) {
     if (k != token_now.kind) {
-        std::cout << "Syntax error! " << std::endl;
+        std::cout << "Syntax error! expected" << Token_kind_nameT[static_cast<int>(k)] << "but get"
+                  << Token_kind_nameT[static_cast<int>(token_now.kind)] << std::endl;
         std::cout << now_counter << std::endl;
     }
 }
@@ -238,13 +272,13 @@ std::unique_ptr<VAR_INIT_STMT_AST> Parser::read_Var_init_stmt() {
     auto name = token_now.str;
     token_check_next(Token_kind::Colon);
     next_token();
-    if (token_now.str == "Int") {
+    if (token_now.str == "I32") {
         token_check_next(Token_kind::Eq);
         next_token();
         auto val = read_Expr();
         token_check_now(Token_kind::Semi_colon);
         next_token();
-        return std::make_unique<VAR_INIT_STMT_AST>(name, "Int", std::move(val));
+        return std::make_unique<VAR_INIT_STMT_AST>(name, "I32", std::move(val));
     } else {
         return nullptr;
     }

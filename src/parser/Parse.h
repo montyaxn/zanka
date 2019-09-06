@@ -12,12 +12,32 @@
 #include "../Token_def.h"
 #include "../ast/AST.h"
 
+#include "llvm/ADT/APFloat.h"
+#include "llvm/ADT/APInt.h"
+#include "llvm/ADT/STLExtras.h"
+#include "llvm/IR/BasicBlock.h"
+#include "llvm/IR/Constants.h"
+#include "llvm/IR/DerivedTypes.h"
+#include "llvm/IR/Function.h"
+#include "llvm/IR/IRBuilder.h"
+#include "llvm/IR/LLVMContext.h"
+#include "llvm/IR/Module.h"
+#include "llvm/IR/Type.h"
+#include "llvm/IR/Verifier.h"
+
 
 class Parser {
 private:
     const std::vector<Token> token_list;
 
+    std::map<int, std::string> Token_kind_nameT;
+
+
+
     static void initialize_BiOpPrecedence();
+
+    void initialize_Token_kind_nameT();
+
 
     //トークン読み込み関係
     Token token_now;
@@ -38,9 +58,11 @@ private:
     std::unique_ptr<FUNC_DECL_AST> read_Func_decl();
 
     void read_Args_Decl(std::unique_ptr<FUNC_DECL_AST> &f);
+
     std::vector<std::unique_ptr<EXPR_BASE_AST>> read_Args();
 
     std::unique_ptr<RET_STMT_AST> read_Ret_stmt();
+
     std::unique_ptr<VAR_INIT_STMT_AST> read_Var_init_stmt();
 
     std::unique_ptr<EXPR_BASE_AST> read_Expr();
